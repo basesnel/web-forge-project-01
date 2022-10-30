@@ -1,0 +1,56 @@
+%list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+%link {
+  text-decoration: none;
+}
+
+%section {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%button {
+  cursor: pointer;
+}
+
+%img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+%container {
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 0 20px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+    padding: 0 16px;
+  }
+}
+
+
+%visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+
