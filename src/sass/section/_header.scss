@@ -4,16 +4,24 @@
   box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
 }
 
-.header__container {
-  @extend %container;
-  @media screen and (min-width: $tablet) {
-    max-width: $tablet;
-    padding: 0 32px;
-  }
-  @media screen and (min-width: $desktop) {
+.header{
+  &__container {
+    @extend %container;
+  
+    @media screen and (min-width: $tablet) {
+      max-width: $tablet;
+      padding: 0 32px;
+    }
+  
+    @media screen and (min-width: $desktop) {
       max-width: $desktop;
       padding: 0 16px;
     }
+  }
+
+  &__link {
+    display: block;
+  }
 }
 
 .wrap {
@@ -21,10 +29,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-}
-
-.header__link {
-  display: block;
 }
 
 .button.appears {
@@ -125,25 +129,25 @@
   }
 }
 
-.nav__link {
-  @media (min-width:$tablet) {
-    &:hover,
-    &:focus,
-    &:active {
-      color: $accentColor;
-      text-decoration: underline;
-    }
-  }
-}
-
 .nav {
   @media (min-width:$tablet) {
-    &__item:not(:last-child) {
+  &__item:not(:last-child) {
       margin-right: 28px;
     }
 
-    &__list {
+  &__list {
       display: flex;
+    }
+  }
+  
+  &__link {
+  @media (min-width:$tablet) {
+      &:hover,
+      &:focus,
+      &:active {
+        color: $accentColor;
+        text-decoration: underline;
+      }
     }
   }
 }
