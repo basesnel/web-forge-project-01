@@ -1,13 +1,14 @@
-@import './common';
-@import './example';
+@import "./common";
+@import "./example";
 
 // Утиліти. Базові стилі
-@import './utils/variable';
-@import './utils/base';
-@import './utils/breackpoints';
-@import './utils/placeholders';
-@import './utils/mixins';
+@import "./utils/variable";
+@import "./utils/base";
+@import "./utils/breackpoints";
+@import "./utils/placeholders";
+@import "./utils/mixins";
 
 // Секції
 
-@import './section/hero';
+@import "./section/hero";
+@import "./section/favorites";

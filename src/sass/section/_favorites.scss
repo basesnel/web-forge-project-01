@@ -1,0 +1,34 @@
+.favorites {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.favorites__container {
+	@extend %container;
+}
+
+.favorites__title {
+	margin-bottom: 20px;
+
+	text-align: center;
+	// color: $primaryTextColor;
+}
+
+.favorites__text {
+	margin-bottom: 60px;
+
+	text-align: center;
+}
+
+.favorites__list {
+	@extend %list;
+}
+
+.favorites__item {
+}
+
+.favorites__link {
+}
+
+.favorites__img {
+}
