@@ -2,7 +2,9 @@
     color: $primaryTextColor;
     border-style: none;
     border-radius: 30px;
-    @include font(13px, 500, 1.5);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 2.5;
   
     &--green {
       background-color: $AccentColor;
@@ -27,7 +29,7 @@
     height: 32px;
     margin-left: 30px;
   
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 767px) {
       display: none;
     }
   }
@@ -43,7 +45,9 @@
     color: $primaryTextColor;
     border-style: none;
     border-radius: 30px;
-    @include font(13px, 500, 1.5);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
   
     &--green {
       background-color: $AccentColor;
