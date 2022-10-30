@@ -1,22 +1,23 @@
 .subscribe {
-  
   @extend %section; 
   padding: 60px 0;
 
 
   &__img {
-  
+  position: absolute;
+  top: -100px;
   @extend %img;
-  margin-bottom: 17px;
+  
   }
 
   &__container {
+  position: relative;
   @extend %container;
   
   }
 
-  &__title {
-  margin: 0;
+  &__title { 
+  
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;

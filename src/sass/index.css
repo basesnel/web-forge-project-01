@@ -334,10 +334,13 @@ figure {
   padding: 60px 0;
 }
 .subscribe__img {
-  margin-bottom: 17px;
+  position: absolute;
+  top: -100px;
+}
+.subscribe__container {
+  position: relative;
 }
 .subscribe__title {
-  margin: 0;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
