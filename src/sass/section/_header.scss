@@ -6,12 +6,10 @@
 
 .header__container {
   @extend %container;
-  
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
     padding: 0 32px;
   }
-
   @media screen and (min-width: $desktop) {
       max-width: $desktop;
       padding: 0 16px;
