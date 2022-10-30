@@ -1,0 +1,169 @@
+.header {
+  position: relative;
+  background: $mainBackgroundColor;
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+}
+
+.header{
+  &__container {
+    @extend %container;
+  
+    @media screen and (min-width: $tablet) {
+      max-width: $tablet;
+      padding: 0 32px;
+    }
+  
+    @media screen and (min-width: $desktop) {
+      max-width: $desktop;
+      padding: 0 16px;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.button.appears {
+  display: none;
+}
+
+.button.appears {
+  @media (min-width:$tablet) {
+    display: block;
+    margin-left: 30px;  
+  }
+}
+
+.menu-toggle {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  @extend %button;
+  background-color: transparent;
+
+  &__icon {
+    fill: $accentColor;
+  }
+
+  &__icon--close {
+    fill: #000;
+  }
+}
+
+.menu-toggle__icon--burger {
+  &:active {
+    fill: $secondaryBackgroundYellow;
+  }
+}
+
+@media (min-width:$tablet) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-container {
+  @media (max-width:767px) {
+    position: absolute;
+    display: none;
+    top: 49px;
+    right: 32px;
+    width: 130px;
+    background: $mainBackgroundColor;
+    box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+    border-radius: 30px 0px 30px 30px;
+  }
+
+  @media (min-width:$tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu-container.is-open {
+  @media (max-width:767px) {
+    display: block;
+  }
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px
+}
+
+.nav {
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    @extend %link;
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  @media (max-width:767px) {
+    &__list {
+      margin: 0;
+      padding: 0;
+    }
+
+    &__link {
+      display: block;
+      font-size: 16px;
+      line-height: 1.18;
+      padding: 16px 70px 16px 16px;
+    }
+  }
+}
+
+.nav {
+  @media (min-width:$tablet) {
+  &__item:not(:last-child) {
+      margin-right: 28px;
+    }
+
+  &__list {
+      display: flex;
+    }
+  }
+  
+  &__link {
+  @media (min-width:$tablet) {
+      &:hover,
+      &:focus,
+      &:active {
+        color: $accentColor;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.nav__item {
+  @media (max-width:767px) {
+    &:active {
+      background-color: $accentColor;
+    }
+
+    &:first-child {
+      border-radius: 30px 0px 0px 0px;
+    }
+
+    &:last-child {
+      border-radius: 0px 0px 30px 30px;
+    }
+  }
+}
