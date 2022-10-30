@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  color: $primaryTextColor
+  color: $primaryTextColor;
 }
 
 h1,
@@ -15,3 +15,38 @@ figure {
   margin: 0;
 }
 
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.17;
+
+  @include tablet {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.16;
+  }
+
+  @include desktop {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.19;
+  }
+}
+
+.section-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.17;
+
+  @include tablet {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.18;
+  }
+
+  @include desktop {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
