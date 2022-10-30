@@ -7,10 +7,10 @@
     line-height: 2.5;
   
     &--green {
-      background-color: $AccentColor;
+      background-color: $accentColor;
   
       &:hover {
-        background-color: $AccentHoverColor;
+        background-color: $accentHoverColor;
       }
     }
   
@@ -19,7 +19,7 @@
       border: 2px solid $darkGreenColor;
   
       &:hover {
-        border: 2px solid $DarkGreenHoverColor;
+        border: 2px solid $darkGreenHoverColor;
       }
     }
   }
@@ -50,10 +50,10 @@
     line-height: 1.5;
   
     &--green {
-      background-color: $AccentColor;
+      background-color: $accentColor;
   
       &:hover {
-        background-color: $AccentHoverColor;
+        background-color: $accentHoverColor;
       }
     }
   
@@ -62,7 +62,7 @@
       border: 1px solid $darkGreenColor;
   
       &:hover {
-        background-color: $SecondaryBackgroundYellow;
+        background-color: $secondaryBackgroundYellow;
         border: 1px solid $darkGreenColor;
       }
     }
