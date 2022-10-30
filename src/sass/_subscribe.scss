@@ -1,0 +1,88 @@
+.subscribe {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 0;
+
+
+  &__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 17px;
+  }
+
+  &__container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  }
+
+  &__title {
+  margin: 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #2c2c2c;
+  }
+
+  &__text {
+  margin: 20px 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #2c2c2c;
+  }
+
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+
+
+  &__input {
+  position: relative;
+  margin-bottom: 20px;
+  width: 279px;
+  height: 42px;
+  padding: 12px 11px;
+
+  /* White */
+  background: #ffffff;
+  /* Yellow main */
+
+  border: 1px solid #ffe550;
+  border-radius: 30px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  /* Neutral/Dark gray */
+  color: #505050;
+}
+}
+
+.subscribe-button {
+  width: 103px;
+  height: 42px;
+  margin-left: auto;
+  border-style: none;
+  background: #bbf330;
+  border-radius: 30px;
+}
+
+.subscribe-button__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #2c2c2c;
+}
+
