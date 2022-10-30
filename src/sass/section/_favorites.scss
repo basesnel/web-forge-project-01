@@ -25,9 +25,29 @@
 }
 
 .favorites__item {
+	@media screen and (max-width: $tablet) {
+		&:nth-last-child(-n + 3) {
+			display: none;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
 }
 
 .favorites__link {
+	@extend %link;
+	display: block;
+	padding: 18px;
+
+	border-radius: 50%;
+	border: 11px solid $secondaryBackgroundYellow;
+
+	&:hover,
+	&:focus {
+		border-color: $accentColor;
+	}
 }
 
 .favorites__img {
