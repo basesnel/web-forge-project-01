@@ -1,5 +1,5 @@
 @import './common';
-@import './example';
+// @import './example';
 
 // Утиліти. Базові стилі
 @import './utils/variable';
@@ -8,15 +8,16 @@
 @import './utils/breackpoints';
 @import './utils/placeholders';
 
-// @import "./components/buttons";
+// @import './components/buttons';
 
 // Секції
 
-@import "./section/header";
-@import "./section/hero";
-@import "./section/favorites";
-@import "./section/offering";
-// @import './section/customers';
+@import './section/header';
+@import './section/hero';
+@import './section/offering';
+@import './section/favorites';
+
+@import './section/customers';
 @import './section/offering';
 @import './subscribe';
-@import "./section/footer";
+@import './section/footer';

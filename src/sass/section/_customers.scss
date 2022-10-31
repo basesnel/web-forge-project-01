@@ -1,52 +1,60 @@
-.customers{
-	padding-top: 60px;
-	padding-bottom: 60px;
-    background-repeat: no-repeat;
-   background-size: cover;
-   background-position: 100%;
-   @media screen and (min-width: 480px){
-    background-image: url(./images/customers/bcgcustomers.png) ;
-    
+.customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  @media screen and (min-width: 480px) {
+    background-image: url('../images/customers/bcgcustomers.png');
+
     @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx){
-       background-image: url(./images/customers/bcgcustomers2x.png) ;
-    
-}}
-.customers__container {
-	@extend %container;}
-.customers__title{
-    margin-bottom: 20px;}
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/customers/bcgcustomers2x.png');
+    }
+  }
+  .customers__container {
+    @extend %container;
+  }
+  .customers__title {
+    margin-bottom: 20px;
+  }
 }
-.customers__text{
-    margin-bottom: 32px;}
+.customers__text {
+  margin-bottom: 32px;
+}
 
-.stars__list{
-    display: flex;}
+.stars__list {
+  @extend %list;
+  display: flex;
+}
 
-.reviews-list__item{
-
-
-     &:not(:last-child) {
-    margin-bottom: 16px;}}
-
-.stars{
-    margin-bottom: 36px;}
-
-.reviews-list__text{
-    width: 264px;
-    height: 95px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.19;
-    color: #2C2C2C;
-    margin-bottom: 32px;}
-
-.personaldate{
+.reviews-list__item {
+  &:not(:last-child) {
     margin-bottom: 16px;
-    display: flex;
-    padding-right: 15px;
-border: 0.854167px solid #7EB101;
-transform: rotate(90deg);}
+  }
+}
+
+.stars {
+  margin-bottom: 36px;
+}
+
+.reviews-list__text {
+  width: 264px;
+  height: 95px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.19;
+  color: #2c2c2c;
+  margin-bottom: 32px;
+}
+
+.personaldate {
+  margin-bottom: 16px;
+  display: flex;
+  padding-right: 15px;
+  border: 0.854167px solid #7eb101;
+  transform: rotate(90deg);
+}
