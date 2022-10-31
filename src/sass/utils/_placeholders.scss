@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-%img{
+%img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -28,15 +28,15 @@
   padding: 0 20px;
   max-width: $mobile;
   
-  // @media screen and (min-width: $tablet) {
-  //   max-width: $tablet;
-  //   padding: 0 32px;
-  // }
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    padding: 0 32px;
+  }
 
-  // @media screen and (min-width: $desktop) {
-  //   max-width: $desktop;
-  //   padding: 0 16px;
-  // }
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+    padding: 0 16px;
+  }
 }
 
 

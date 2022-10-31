@@ -1,8 +1,36 @@
 .hero{
     padding-top: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 110px;
+    max-width: 1280px;
+    
+    margin: auto;
 
     background-color: $mainBackgroundColor;
+
+
+    background-image: url(../images/backgrounds/hero/back1-mob320-1x.png);
+
+    @media screen and (min-width:321px) {
+        background-image:
+            url(../images/backgrounds/hero/back1-mob-1x.png);
+    }
+
+    @media screen and (min-width:481px) {
+        background-image:
+            url(../images/backgrounds/hero/back1-tab-1x.png);
+    }
+
+    @media screen and (min-width:769px) {
+        background-image:
+            url(../images/backgrounds/hero/back1-desk-1x.png);
+    }
+
+
+
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .hero__container{
