@@ -3,19 +3,18 @@
 }
 
 .footer {
-    padding: 60px 0;
-    width: 100vw;
-    height: 100%;
-    margin: 0 auto;
-    background-image: url('');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  position: relative;
+  padding: 60px 0;
+  width: 100vw;
+  height: 100%;
+  margin: 0 auto;
+  background-image: url('../images/footer-bg/footer-mobile\ 1x.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        background-image: url('');
+    @include retina {
+        background-image: url('../images/footer-bg/footer-mobile\ 2x.jpg');
     }
 }
 
@@ -28,8 +27,8 @@
 }
 
 .footer__block--second {
-    margin-top: 20px;
-    bottom: 0;
+  margin-top: 82px;
+  bottom: 0;
 }
 
 .footer__link {
@@ -47,10 +46,10 @@
     @extend %list;
 }
 
-.nav__link {
-    @extend %link;
-    display: inline-block;
-    color: #000;
+.nav__link--footer {
+  @extend %link;
+  display: inline-block;
+  color: #000;
 }
 
 .nav__item--footer {
@@ -64,22 +63,36 @@
 }
 
 .footer__form {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__input {
-    border-radius: 30px;
-    border: 0.85px solid $secondaryBackgroundYellow;
-    padding: 12px;
+    width: 100%;
+  border-radius: 30px;
+  border: 0.85px solid $secondaryBackgroundYellow;
+  padding: 12px;
 
-    &::placeholder {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 1.5;
-        color: #505050;
-    }
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #505050;
+  }
+
+  &:valid {
+      border-color: $darkGreenColor;
+  }
+
+  &:invalid {
+      border-color: $invalidInput;
+  }
+
+  &:placeholder-shown {
+      border-color: $secondaryBackgroundYellow;
+  }
 }
 
 .footer__label {
@@ -93,15 +106,22 @@
 }
 
 .footer__button {
-    margin-top: 20px;
-    border-radius: 30px;
-    border: 0.85px solid $darkGreenColor;
-    padding: 11px 22px;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.5;
-    color: #2c2c2c;
-    background-color: $primaryWhiteColor;
+  @extend %button;
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+  border-radius: 30px;
+  border: 0.85px solid $darkGreenColor;
+  padding: 11px 22px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #2c2c2c;
+  background-color: $primaryWhiteColor;
+
+&:hover, &:focus {
+        background-color: $secondaryBackgroundYellow;
+    }
 }
 
 .footer__text {
@@ -116,17 +136,20 @@
 }
 
 .footer__list {
-    @extend %list;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
+  @extend %list;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 60px;
 }
 
 .footer__text--copyright {
-    margin-top: 40px;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 1.2;
-    color: $primaryTextColor;
-    text-align: center;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  color: $primaryTextColor;
+  text-align: center;
 }
