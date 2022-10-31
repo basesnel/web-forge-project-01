@@ -1,0 +1,132 @@
+.footer__container {
+    @extend %container;
+}
+
+.footer {
+    padding: 60px 0;
+    width: 100vw;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('');
+    }
+}
+
+.footer__block--first {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    justify-content: flex-start;
+    column-gap: calc((100% - 118px) / 2);
+}
+
+.footer__block--second {
+    margin-top: 20px;
+    bottom: 0;
+}
+
+.footer__link {
+    width: 69px;
+    display: inline-block;
+}
+
+.nav--footer {
+    display: inline-block;
+    width: 49px;
+    margin-top: 4px;
+}
+
+.nav__list {
+    @extend %list;
+}
+
+.nav__link {
+    @extend %link;
+    display: inline-block;
+    color: #000;
+}
+
+.nav__item--footer {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__form {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__input {
+    border-radius: 30px;
+    border: 0.85px solid $secondaryBackgroundYellow;
+    padding: 12px;
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #505050;
+    }
+}
+
+.footer__label {
+    width: 100%;
+    margin-bottom: 12px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $primaryTextColor;
+}
+
+.footer__button {
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 0.85px solid $darkGreenColor;
+    padding: 11px 22px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #2c2c2c;
+    background-color: $primaryWhiteColor;
+}
+
+.footer__text {
+    font-size: 10px;
+}
+
+.footer__link--additional {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $darkGreenColor;
+}
+
+.footer__list {
+    @extend %list;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.footer__text--copyright {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    color: $primaryTextColor;
+    text-align: center;
+}
