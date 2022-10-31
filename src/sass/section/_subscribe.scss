@@ -4,7 +4,7 @@
 
   &__img {
     position: absolute;
-    top: -50%;
+    top: -60%;
     margin-left: auto;
     margin-right: auto;
 
@@ -15,11 +15,11 @@
     }
 
     @media screen and (min-width: 450px) {
-      top: -55%;
+      top: -65%;
     }
 
     @media screen and (min-width: 768px) {
-      top: -65%;
+      top: -70%;
       width: 281px;
       left: 53%;
     }
