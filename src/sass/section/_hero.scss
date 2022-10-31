@@ -1,28 +1,47 @@
 .hero{
     padding-top: 60px;
     padding-bottom: 110px;
-    max-width: 1280px;
+    max-width: 480px;
     
     margin: auto;
 
     background-color: $mainBackgroundColor;
 
 
-    background-image: url(../images/backgrounds/hero/back1-mob320-1x.png);
+    background-image: url(../images/backgrounds/hero/back1-mob320-1x.webp);
+
+    @include retina{
+        background-image: url(../images/backgrounds/hero/back1-mob320-2x.webp);
+    }
 
     @media screen and (min-width:321px) {
         background-image:
-            url(../images/backgrounds/hero/back1-mob-1x.png);
+            url(../images/backgrounds/hero/back1-mob480-1x.webp);
+
+        @include retina{
+            background-image: url(../images/backgrounds/hero/back1-mob480-2x.webp);
+        }
     }
 
-    @media screen and (min-width:481px) {
+
+    @media screen and (min-width:$tablet) {
+        max-width: 768px;
         background-image:
-            url(../images/backgrounds/hero/back1-tab-1x.png);
+            url(../images/backgrounds/hero/back1-tab-1x.webp);
+
+        @include retina{
+            background-image: url(../images/backgrounds/hero/back1-tab-2x.webp);
+        }
     }
 
-    @media screen and (min-width:769px) {
+    @media screen and (min-width:$desktop) {
+        max-width: 1280px;
         background-image:
-            url(../images/backgrounds/hero/back1-desk-1x.png);
+            url(../images/backgrounds/hero/back1-desk-1x.webp);
+
+        @include retina {
+                background-image: url(../images/backgrounds/hero/back1-desk-2x.webp);
+        }
     }
 
 
