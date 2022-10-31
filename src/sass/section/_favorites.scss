@@ -64,14 +64,17 @@
 	@include tablet {
 		width: calc((100% - 32px) / 2);
 	}
+
+	@include desktop {
+		width: calc((100% - (32px * 2)) / 3);
+	}
 }
 
 .favorites__link {
 	@extend %link;
-	display: block;
+	@include CentredFlex(flex);
 	width: 280px;
-	// height: 280px;
-	padding: 18px;
+	height: 280px;
 
 	border-radius: 50%;
 	border: 11px solid $secondaryBackgroundYellow;
@@ -85,8 +88,16 @@
 
 	@include tablet {
 		width: 336px;
-		height: 338px;
-		padding: 21px;
+		height: 336px;
+
+		border-width: 14px;
+	}
+
+	@include desktop {
+		width: 395px;
+		height: 395px;
+
+		border-width: 16px;
 	}
 }
 
