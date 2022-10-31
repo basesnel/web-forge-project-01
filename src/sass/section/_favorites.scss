@@ -39,6 +39,12 @@
 
 .favorites__list {
 	@extend %list;
+
+	@include tablet {
+		display: flex;
+		gap: 32px;
+		flex-wrap: wrap;
+	}
 }
 
 .favorites__item {
@@ -54,13 +60,17 @@
 	&:not(:last-child) {
 		margin-bottom: 20px;
 	}
+
+	@include tablet {
+		width: calc((100% - 32px) / 2);
+	}
 }
 
 .favorites__link {
 	@extend %link;
 	display: block;
 	width: 280px;
-	height: 282px;
+	// height: 280px;
 	padding: 18px;
 
 	border-radius: 50%;
@@ -71,6 +81,12 @@
 	&:hover,
 	&:focus {
 		border-color: $accentColor;
+	}
+
+	@include tablet {
+		width: 336px;
+		// height: 338px;
+		padding: 21px;
 	}
 }
 
