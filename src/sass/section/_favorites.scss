@@ -32,11 +32,11 @@
 	display: flex;
 	justify-content: center;
 
-	// @media screen and (max-width: $tablet) {
-	// 	&:nth-last-child(-n + 3) {
-	// 		display: none;
-	// 	}
-	// }
+	@media screen and (max-width: $tablet) {
+		&:nth-last-child(-n + 3) {
+			display: none;
+		}
+	}
 
 	&:not(:last-child) {
 		margin-bottom: 20px;
