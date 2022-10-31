@@ -74,24 +74,6 @@
     // color: $primaryTextColor;
 }
 
-.button{
-    @extend %button;
-
-    padding: 6px 18px;
-
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.5;
-    color: $primaryTextColor;
-    background-color: $accentColor;
-    border-radius: 30px;
-    border: none;
-    
-    &:active{
-        background-color: $accentHoverColor;
-    }
-}
-
 // *{
 //     outline: 1px solid tomato;
 // }

@@ -1,5 +1,5 @@
 .footer__container {
-    @extend %container;
+  @extend %container;
 }
 
 .footer {
@@ -16,14 +16,13 @@
     @include retina {
         background-image: url('../images/footer-bg/footer-mobile\ 2x.jpg');
     }
-}
 
 .footer__block--first {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 40px;
-    justify-content: flex-start;
-    column-gap: calc((100% - 118px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  justify-content: flex-start;
+  column-gap: calc((100% - 118px) / 2);
 }
 
 .footer__block--second {
@@ -32,18 +31,18 @@
 }
 
 .footer__link {
-    width: 69px;
-    display: inline-block;
+  width: 69px;
+  display: inline-block;
 }
 
 .nav--footer {
-    display: inline-block;
-    width: 49px;
-    margin-top: 4px;
+  display: inline-block;
+  width: 49px;
+  margin-top: 4px;
 }
 
 .nav__list {
-    @extend %list;
+  @extend %list;
 }
 
 .nav__link--footer {
@@ -53,17 +52,17 @@
 }
 
 .nav__item--footer {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.2;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
 
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__form {
-    position: relative;
+  position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -96,13 +95,13 @@
 }
 
 .footer__label {
-    width: 100%;
-    margin-bottom: 12px;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: $primaryTextColor;
+  width: 100%;
+  margin-bottom: 12px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $primaryTextColor;
 }
 
 .footer__button {
@@ -118,21 +117,21 @@
   line-height: 1.5;
   color: #2c2c2c;
   background-color: $primaryWhiteColor;
-
+  
 &:hover, &:focus {
         background-color: $secondaryBackgroundYellow;
     }
 }
 
 .footer__text {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .footer__link--additional {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: $darkGreenColor;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $darkGreenColor;
 }
 
 .footer__list {
