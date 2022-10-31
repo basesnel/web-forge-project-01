@@ -1,83 +1,114 @@
 .subscribe {
-  
-  @extend %section; 
+  @extend %section;
   padding: 60px 0;
 
-
   &__img {
-  position: absolute;
-  top: -100px;
-  @extend %img;
- 
+    position: absolute;
+    top: -50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @extend %img;
+
+    @media screen and (min-width: 320px) {
+      width: 280px;
+    }
+
+    @media screen and (min-width: 450px) {
+      top: -55%;
+    }
+
+    @media screen and (min-width: 768px) {
+      top: -65%;
+      width: 281px;
+      left: 53%;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 608px;
+    }
   }
 
   &__container {
-  @extend %container;
+    position: relative;
+    @extend %container;
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
+    @media screen and (min-width: 480px) {
+      width: 480px;
+    }
 
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
+    @media screen and (min-width: 768px) {
+      width: 768px;
+    }
 
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-  }
-
-  
+    @media screen and (min-width: 1280px) {
+      width: 1280px;
+    }
   }
 
   &__title {
-  margin: 0;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.2;
-  color: $primaryTextColor;
+    margin: 0;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    color: $primaryTextColor;
+
+    @media screen and (min-width: 768px) {
+      font-size: 42px;
+    }
   }
 
   &__text {
-  margin: 20px 0;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: $primaryTextColor;
-  }
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $primaryTextColor;
 
+    @media screen and (min-width: 768px) {
+      width: 656px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
 }
 
 .subscribe-form {
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 
   &__input {
-  position: relative;
-  margin-bottom: 20px;
-  width: 279px;
-  height: 42px;
-  padding: 12px 11px;
+    position: relative;
+    margin-bottom: 20px;
+    width: 279px;
+    height: 42px;
+    padding: 12px 11px;
+   
+    background: $primaryWhiteColor;
+    
 
-  /* White */
-  background: $primaryWhiteColor;
-  /* Yellow main */
+    border: 1px solid $secondaryBackgroundYellow;
+    border-radius: 30px;
+   
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    /* Neutral/Dark gray */
+    color: #505050;
 
-  border: 1px solid $secondaryBackgroundYellow;
-  border-radius: 30px;
+    @media screen and (min-width: 768px) {
+      margin-right: 22px;
+      width: 394px;
+    }
 
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
-  /* Neutral/Dark gray */
-  color: #505050;
-}
+    @media screen and (min-width: 1280px) {
+      margin-right: 32px;
+    }
+  }
 }
 
 .subscribe-button {
@@ -86,16 +117,23 @@
   height: 42px;
   margin-left: auto;
   border-style: none;
-  background: #bbf330;
+  background: $accentColor;
   border-radius: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+    display: flex;
+  }
+
+  &:hover, 
+  &:focus {
+    background-color: $accentHoverColor;
+  }
 }
 
 .subscribe-button__text {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 1.5;
   color: $primaryTextColor;
 }
-
