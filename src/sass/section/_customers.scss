@@ -1,6 +1,5 @@
 .customers {
   max-width: 480px;
-  // background-color: #ffe550;
   padding-bottom: 60px;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -13,6 +12,13 @@
   (min-resolution: 2dppx) {
     background-image: url(../images/customers/bcgcustomers2x.png);
   }  
+  @include tablet {
+    padding: 60px 0 120px;
+  }
+  @include desktop {
+    padding: 100px 0 255px;
+    height: 652px;
+  }
   }
   .customers__container {
     @extend %container;
@@ -35,28 +41,27 @@
 .reviews-list__item {
   padding: 8px;
   background-color: #ffff;
-  max-width: 280px;
+  // max-width: 280px;
   border-radius: 0px 30px 30px 30px;
   &:not(:last-child) {
     margin-bottom: 16px;
-  }
+   }
 }
 .stars {
   margin-bottom: 36px;
 }
 .reviews-list{
   @extend %list;
-}
+  }
+
 .reviews-list__text {
   width: 264px;
   height: 95px;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.19;
   color: #2c2c2c;
-  margin-bottom: 32px;
+   margin-bottom: 32px;
 }
 
 .personaldate {
