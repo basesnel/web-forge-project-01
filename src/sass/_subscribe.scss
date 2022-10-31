@@ -1,20 +1,18 @@
 .subscribe {
-  margin-left: auto;
-  margin-right: auto;
+  
+  @extend %section; 
   padding: 60px 0;
 
 
   &__img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  
+  @extend %img;
   margin-bottom: 17px;
   }
 
   &__container {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 20px;
+  @extend %container;
+  
   }
 
   &__title {
@@ -24,7 +22,7 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 1.2;
-  color: #2c2c2c;
+  color: $primaryTextColor;
   }
 
   &__text {
@@ -34,7 +32,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  color: #2c2c2c;
+  color: $primaryTextColor;
   }
 
 }
@@ -52,10 +50,10 @@
   padding: 12px 11px;
 
   /* White */
-  background: #ffffff;
+  background: $primaryWhiteColor;
   /* Yellow main */
 
-  border: 1px solid #ffe550;
+  border: 1px solid $secondaryBackgroundYellow;
   border-radius: 30px;
 
   font-family: "Roboto";
@@ -69,6 +67,7 @@
 }
 
 .subscribe-button {
+  cursor: pointer;
   width: 103px;
   height: 42px;
   margin-left: auto;
@@ -83,6 +82,6 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 1.5;
-  color: #2c2c2c;
+  color: $primaryTextColor;
 }
 
