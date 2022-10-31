@@ -3,20 +3,19 @@
 }
 
 .footer {
+    position: relative;
   padding: 60px 0;
   width: 100vw;
   height: 100%;
   margin: 0 auto;
-  // background-image: url('');
-  background-size: cover;
+  background-image: url('../images/footer-bg/footer-mobile\ 1x.jpg');
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 
-  // @media (min-device-pixel-ratio: 2),
-  // (min-resolution: 192dpi),
-  // (min-resolution: 2dppx) {
-  //     background-image: url('');
-  // }
+  @include retina {
+    background-image: url('../images/footer-bg/footer-mobile\ 2x.jpg');
+  }
 }
 
 .footer__block--first {
@@ -28,8 +27,7 @@
 }
 
 .footer__block--second {
-  margin-top: 20px;
-  bottom: 0;
+    margin-top: 82px;
 }
 
 .footer__link {
@@ -47,7 +45,7 @@
   @extend %list;
 }
 
-.nav__link {
+.nav__link--footer {
   @extend %link;
   display: inline-block;
   color: #000;
@@ -64,12 +62,14 @@
 }
 
 .footer__form {
+    position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .footer__input {
+  width: 100%;
   border-radius: 30px;
   border: 0.85px solid $secondaryBackgroundYellow;
   padding: 12px;
@@ -79,6 +79,18 @@
     font-size: 12px;
     line-height: 1.5;
     color: #505050;
+  }
+
+  &:valid {
+    border-color: $darkGreenColor;
+  }
+
+  &:invalid {
+    border-color: $invalidInput;
+  }
+
+  &:placeholder-shown {
+    border-color: $secondaryBackgroundYellow;
   }
 }
 
@@ -93,6 +105,9 @@
 }
 
 .footer__button {
+  @extend %button;
+  position: absolute;
+  right: 0;
   margin-top: 20px;
   border-radius: 30px;
   border: 0.85px solid $darkGreenColor;
@@ -102,6 +117,10 @@
   line-height: 1.5;
   color: #2c2c2c;
   background-color: $primaryWhiteColor;
+
+  &:hover, &:focus {
+    background-color: $secondaryBackgroundYellow;
+  }
 }
 
 .footer__text {
@@ -119,11 +138,14 @@
   @extend %list;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 60px;
 }
 
 .footer__text--copyright {
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.2;
