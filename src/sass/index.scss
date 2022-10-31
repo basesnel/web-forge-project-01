@@ -1,20 +1,20 @@
-@import "./common";
-@import "./example";
+@import './common';
+@import './example';
 
 // Утиліти. Базові стилі
-@import "./utils/variable";
-@import "./utils/mixins";
-@import "./utils/base";
-@import "./utils/breackpoints";
-@import "./utils/placeholders";
+@import './utils/variable';
+@import './utils/mixins';
+@import './utils/base';
+@import './utils/breackpoints';
+@import './utils/placeholders';
 
 // @import "./components/buttons";
 
 // Секції
 
-@import "./section/header";
-@import "./section/hero";
-@import "./section/favorites";
-@import "./section/offering";
-@import "./subscribe";
-
+@import './section/header';
+@import './section/hero';
+@import './section/favorites';
+// @import './section/customers';
+@import './section/offering';
+@import './subscribe';
