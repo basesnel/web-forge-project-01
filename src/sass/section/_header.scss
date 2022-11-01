@@ -20,27 +20,29 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    padding: 10px 0;
   }
 }
 
 .wrap {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  // padding: 10px 20px;
 }
 
-.button.appears {
-  display: none;
-}
+// .button.appears {
+//   display: none;
+// }
 
-.button.appears {
-  @media (min-width:$tablet) {
-    display: block;
-    margin-left: 30px;  
-  }
-}
+// .button.appears {
+//   @media (min-width:$tablet) {
+//     display: block;
+//     margin-left: 30px;  
+//   }
+// }
 
 .menu-toggle {
   display: inline-flex;
@@ -59,7 +61,12 @@
   }
 }
 
+.menu-toggle--active {
+  padding: 22px 0px;
+}
+
 .menu-toggle__icon--burger {
+  &:hover,
   &:active {
     fill: $secondaryBackgroundYellow;
   }
@@ -75,8 +82,8 @@
   @media (max-width:767px) {
     position: absolute;
     display: none;
-    top: 49px;
-    right: 32px;
+    top: 50px;
+    right: 0px;
     width: 130px;
     background: $mainBackgroundColor;
     box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
@@ -154,6 +161,7 @@
 
 .nav__item {
   @media (max-width:767px) {
+    &:hover,
     &:active {
       background-color: $accentColor;
     }
