@@ -2,48 +2,83 @@
   @extend %section;
   padding: 60px 0;
 
-  &__img {
-    position: absolute;
-    top: -60%;
-    margin-left: auto;
-    margin-right: auto;
+  @media screen and (min-width: 768px) {
+    padding-top: 160px;
+  }
 
-    @extend %img;
+  &__thumb {
+    width: 140px;
+
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
 
     @media screen and (min-width: 320px) {
-      width: 280px;
-    }
-
-    @media screen and (min-width: 450px) {
-      top: -65%;
+      width: 180px;
+      top: -120px;
     }
 
     @media screen and (min-width: 768px) {
-      top: -70%;
-      width: 281px;
-      left: 53%;
+      top: -170px;
+      left: 450px;
+      width: 280px;
+      transform: translateX(0);
     }
 
     @media screen and (min-width: 1280px) {
-      width: 608px;
+      width: 500px;
+      top: -100px;
+      left: 740px;
+      width: 500px;
+      transform: translateX(0);
     }
+  }
+
+  &__img {
+    // position: absolute;
+    // top: -60%;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // margin-left: auto;
+    // margin-right: auto;
+
+    @extend %img;
+
+    // @media screen and (min-width: 320px) {
+    //   width: 280px;
+    // }
+
+    // @media screen and (min-width: 450px) {
+    //   top: -65%;
+    // }
+
+    // @media screen and (min-width: 768px) {
+    //   top: -70%;
+    //   width: 281px;
+    //   left: 53%;
+    // }
+
+    // @media screen and (min-width: 1280px) {
+    //   width: 608px;
+    // }
   }
 
   &__container {
     position: relative;
     @extend %container;
 
-    @media screen and (min-width: 480px) {
-      width: 480px;
-    }
-
-    @media screen and (min-width: 768px) {
-      width: 768px;
-    }
-
-    @media screen and (min-width: 1280px) {
-      width: 1280px;
-    }
+    // @media screen and (min-width: 480px) {
+    // width: 480px;
+    // }
+    //
+    // @media screen and (min-width: 768px) {
+    // width: 768px;
+    // }
+    //
+    // @media screen and (min-width: 1280px) {
+    // width: 1280px;
+    // }
   }
 
   &__title {
@@ -84,16 +119,15 @@
   &__input {
     position: relative;
     margin-bottom: 20px;
-    width: 279px;
+    width: 100%;
     height: 42px;
     padding: 12px 11px;
-   
+
     background: $primaryWhiteColor;
-    
 
     border: 1px solid $secondaryBackgroundYellow;
     border-radius: 30px;
-   
+
     font-weight: 400;
     font-size: 12px;
     line-height: 1.5;
@@ -125,7 +159,7 @@
     display: flex;
   }
 
-  &:hover, 
+  &:hover,
   &:focus {
     background-color: $accentHoverColor;
   }
