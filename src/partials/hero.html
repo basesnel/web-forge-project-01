@@ -1,15 +1,33 @@
 <section class="hero" id="hero">
   <div class="hero__container">
-    <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
 
-    <p class="hero__text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-      ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-    </p>
+    <div class="hero__bloс-text">
+      <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
 
-    <button type="button" class="order-button order-button--green hero-button">
-      Order Now
-    </button>
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+
+      <button type="button" class="order-button order-button--green hero-button">
+        Order Now
+      </button>
+    </div>
+
+    <div class="hero__bloс-img">
+      <picture class="hero__picture">
+        <source srcset="
+          ./images/hero/foto_1.png 1x" media="(min-width:1280px)" />
+
+        <source srcset="
+          ./images/hero/foto_1_tablet.png 1x" media="(max-width:1279px)" />
+
+        <img class="hero__img" src="./images/hero/foto_1.png" alt="комплексний обід 1">
+      </picture>
+    </div>
+    
+
+
   </div>
 </section>
