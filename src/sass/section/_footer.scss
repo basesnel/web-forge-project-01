@@ -1,22 +1,58 @@
-.footer__container {
-  @extend %container;
-}
-
 .footer {
-  padding: 60px 0;
-  width: 100vw;
-  height: 100%;
-  margin: 0 auto;
-  // background-image: url('');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  @extend %section;
+  max-width: 480px;
+  background-color: $secondaryWhiteColor;
+  position: relative;
 
-  // @media (min-device-pixel-ratio: 2),
-  // (min-resolution: 192dpi),
-  // (min-resolution: 2dppx) {
-  //     background-image: url('');
+  padding: 60px 0;
+  // width: 100vw;
+  // height: 100%;
+  background-color: $secondaryWhiteColor;
+  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+
+  background-image: url(../images/footer-bg/footer-mob-apple-1x.png),
+    url(../images/footer-bg/footer-mob-orange-1x.png),
+    url(../images/footer-bg/footer-mob-downgroup-1x.png);
+  background-size: 110px, 104px, 253px;
+  background-repeat: no-repeat;
+  background-position: top 132px left, top 7px right, bottom left 43px;
+  @include retina {
+    background-image: url(../images/footer-bg/footer-mob-apple-2x.png),
+      url(../images/footer-bg/footer-mob-orange-2x.png),
+      url(../images/footer-bg/footer-mob-downgroup-2x.png);
+    background-size: 110px, 104px, 253px;
+    background-repeat: no-repeat;
+    background-position: top 132px left, top 7px right, bottom left 43px;
+  }
+
+  // width: 100vw;
+  // height: 100%;
+  // margin: 0 auto;
+
+  // @media (max-width: 320px) {
+  //   background-image: url('../images/footer-bg/footer-mobile-1x.jpg');
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+
+  //   @include retina {
+  //     background-image: url('../images/footer-bg/footer-mobile-2x.jpg');
+  //   }
   // }
+
+  // @media (min-width: 320px) {
+  //   background: url('/src/images/footer-bg/apple-mobile-1x.png') no-repeat left
+  //       25% scroll,
+  //     url('/src/images/footer-bg/bottom-mobile-1x.png') no-repeat center bottom
+  //       scroll,
+  //     url('/src/images/footer-bg/orange-mobile-1x.png') no-repeat right top
+  //       scroll;
+  // }
+
+  &__container {
+    @extend %container;
+    padding: 0 20px;
+  }
 }
 
 .footer__block--first {
@@ -28,7 +64,7 @@
 }
 
 .footer__block--second {
-  margin-top: 20px;
+  margin-top: 82px;
   bottom: 0;
 }
 
@@ -47,7 +83,7 @@
   @extend %list;
 }
 
-.nav__link {
+.nav__link--footer {
   @extend %link;
   display: inline-block;
   color: #000;
@@ -58,20 +94,32 @@
   font-weight: 400;
   line-height: 1.2;
 
+  &:first-child {
+    border-radius: 0px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 20px;
   }
 }
 
 .footer__form {
+  position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .footer__input {
+  width: 100%;
+  border: 1px solid $secondaryBackgroundYellow;
+
   border-radius: 30px;
-  border: 0.85px solid $secondaryBackgroundYellow;
   padding: 12px;
 
   &::placeholder {
@@ -79,6 +127,18 @@
     font-size: 12px;
     line-height: 1.5;
     color: #505050;
+  }
+
+  &:valid {
+    border-color: $darkGreenColor;
+  }
+
+  &:invalid {
+    border-color: $invalidInput;
+  }
+
+  &:placeholder-shown {
+    border-color: $secondaryBackgroundYellow;
   }
 }
 
@@ -93,6 +153,9 @@
 }
 
 .footer__button {
+  @extend %button;
+  position: absolute;
+  right: 0;
   margin-top: 20px;
   border-radius: 30px;
   border: 0.85px solid $darkGreenColor;
@@ -102,6 +165,12 @@
   line-height: 1.5;
   color: #2c2c2c;
   background-color: $primaryWhiteColor;
+
+  &:hover,
+  &:focus {
+
+    background-color: $secondaryBackgroundYellow;
+  }
 }
 
 .footer__text {
@@ -119,11 +188,14 @@
   @extend %list;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 60px;
 }
 
 .footer__text--copyright {
   margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 400;
   font-size: 10px;
   line-height: 1.2;

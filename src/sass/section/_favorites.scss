@@ -1,6 +1,8 @@
 .favorites {
 	padding: 60px 0;
 
+	background-color: $mainBackgroundColor;
+
 	@include tablet {
 		padding: 100px 0;
 	}
