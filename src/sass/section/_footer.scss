@@ -118,6 +118,7 @@
 .footer__input {
   width: 100%;
   border: 1px solid $secondaryBackgroundYellow;
+
   border-radius: 30px;
   padding: 12px;
 
@@ -167,6 +168,7 @@
 
   &:hover,
   &:focus {
+
     background-color: $secondaryBackgroundYellow;
   }
 }
