@@ -1,4 +1,5 @@
 .customers {
+  @extend %section;
   max-width: 480px;
   padding-bottom: 60px;
   padding-top: 60px;
@@ -8,10 +9,10 @@
   background-position: bottom center;
   background-image: url(../images/customers/bcgcustomers.png);
   @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     background-image: url(../images/customers/bcgcustomers2x.png);
-  }  
+  }
   @include tablet {
     padding: 60px 0 120px;
   }
@@ -19,14 +20,13 @@
     padding: 100px 0 255px;
     height: 652px;
   }
-  }
-  .customers__container {
-    @extend %container;
-    
-  }
-  .customers__title {
-    margin-bottom: 20px;
-  }
+}
+.customers__container {
+  @extend %container;
+}
+.customers__title {
+  margin-bottom: 20px;
+}
 
 .customers__text {
   max-width: 480px;
@@ -45,14 +45,14 @@
   border-radius: 0px 30px 30px 30px;
   &:not(:last-child) {
     margin-bottom: 16px;
-   }
+  }
 }
 .stars {
   margin-bottom: 36px;
 }
-.reviews-list{
+.reviews-list {
   @extend %list;
-  }
+}
 
 .reviews-list__text {
   width: 264px;
@@ -61,29 +61,28 @@
   font-size: 16px;
   line-height: 1.19;
   color: #2c2c2c;
-   margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .personaldate {
   display: block;
   padding-right: 18px;
   margin-left: 16px;
-  border-right: 0.854167px solid #7eb101;
+  border-right: 1px solid #7eb101;
 }
-.infoclient{
+.infoclient {
   display: flex;
   align-content: center;
 }
-.personaldate__title{
-font-weight: 500;
-font-size: 14px;
-line-height: 150%;
-color: #2C2C2C;
+.personaldate__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #2c2c2c;
 }
-.personaldate__text{
-font-weight: 400;
-font-size: 14px;
-line-height: 150%;
-color: #2C2C2C;
-
+.personaldate__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #2c2c2c;
 }

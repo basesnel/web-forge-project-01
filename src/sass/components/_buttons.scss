@@ -1,69 +1,69 @@
 .order-button {
-    @extend %button;
-    color: $primaryTextColor;
-    border-style: none;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.5;
-  
-    &--green {
-      background-color: $accentColor;
-  
-      &:hover {
-        background-color: $accentHoverColor;
-      }
+  color: $primaryTextColor;
+  border-style: none;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  &--green {
+    background-color: $accentColor;
+
+    &:hover {
+      background-color: $accentHoverColor;
     }
-  
-    &--white {
-      background-color: $primaryWhiteColor;
-      border: 2px solid $darkGreenColor;
-  
-      &:hover {
-        border: 2px solid $darkGreenHoverColor;
-      }
-    }
-  }
-  
-  .header-button {
-    padding: 6px 18px;
-    margin-left: 30px;
-  
-    @media screen and (max-width: 767px) {
-      display: none;
-    }
-  }
-  
-  .hero-button {
-    padding: 6px 18px;
   }
 
- 
-  .subscribe-button {
-    padding: 11px 22px;
-    color: $primaryTextColor;
-    border-style: none;
-    border-radius: 30px;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 1.5;
-  
-    &--green {
-      background-color: $accentColor;
-  
-      &:hover {
-        background-color: $accentHoverColor;
-      }
-    }
-  
-    &--white {
-      background-color: $primaryWhiteColor;
-      border: 1px solid $darkGreenColor;
-  
-      &:hover {
-        background-color: $secondaryBackgroundYellow;
-        border: 1px solid $darkGreenColor;
-      }
+  &--white {
+    background-color: $primaryWhiteColor;
+    border: 2px solid $darkGreenColor;
+
+    &:hover {
+      border: 2px solid $darkGreenHoverColor;
     }
   }
-  
+}
+
+.header-button {
+  width: 98px;
+  height: 32px;
+  margin-left: 30px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero-button {
+  width: 98px;
+  height: 32px;
+}
+
+.subscribe-button {
+  width: 103px;
+  height: 42px;
+  color: $primaryTextColor;
+  border-style: none;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  &--green {
+    background-color: $accentColor;
+
+    &:hover {
+      background-color: $accentHoverColor;
+    }
+  }
+
+  &--white {
+    background-color: $primaryWhiteColor;
+    border: 1px solid $darkGreenColor;
+
+    &:hover {
+      background-color: $secondaryBackgroundYellow;
+      border: 1px solid $darkGreenColor;
+    }
+  }
+}
