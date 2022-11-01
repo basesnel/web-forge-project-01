@@ -8,14 +8,23 @@
   width: 100vw;
   height: 100%;
   margin: 0 auto;
-  background-image: url('../images/footer-bg/footer-mobile-1x.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-    @include retina {
+  
+  @media (max-width: 320px) {
+    background-image: url('../images/footer-bg/footer-mobile-1x.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    
+      @include retina {
         background-image: url('../images/footer-bg/footer-mobile-2x.jpg');
-    }
+      }
+  }
+
+  @media (min-width: 320px) {
+    background: url('/src/images/footer-bg/apple-mobile-1x.png') no-repeat left 25% scroll, 
+                url('/src/images/footer-bg/bottom-mobile-1x.png') no-repeat center bottom scroll,
+                url('/src/images/footer-bg/orange-mobile-1x.png') no-repeat right top scroll;
+  }
 }
 
 .footer__block--first {
@@ -70,7 +79,7 @@
 }
 
 .footer__input {
-    width: 100%;
+  width: 100%;
   border-radius: 30px;
   border: 0.85px solid $secondaryBackgroundYellow;
   padding: 12px;
@@ -83,15 +92,15 @@
   }
 
   &:valid {
-      border-color: $darkGreenColor;
+    border-color: $darkGreenColor;
   }
 
   &:invalid {
-      border-color: $invalidInput;
+    border-color: $invalidInput;
   }
 
   &:placeholder-shown {
-      border-color: $secondaryBackgroundYellow;
+    border-color: $secondaryBackgroundYellow;
   }
 }
 
@@ -118,10 +127,10 @@
   line-height: 1.5;
   color: #2c2c2c;
   background-color: $primaryWhiteColor;
-  
-&:hover, &:focus {
-        background-color: $secondaryBackgroundYellow;
-    }
+
+  &:hover, &:focus {
+    background-color: $secondaryBackgroundYellow;
+  }
 }
 
 .footer__text {
