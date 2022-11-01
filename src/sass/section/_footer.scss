@@ -1,7 +1,9 @@
 .footer {
+  @extend %section;
+  max-width: 480px;
+  background-color: $secondaryWhiteColor;
   position: relative;
 
-  @extend %section;
   padding: 60px 0;
   // width: 100vw;
   // height: 100%;
@@ -14,7 +16,6 @@
   background-size: 110px, 104px, 253px;
   background-repeat: no-repeat;
   background-position: top 132px left, top 7px right, bottom left 43px;
-
   @include retina {
     background-image: url(../images/footer-bg/footer-mob-apple-2x.png),
       url(../images/footer-bg/footer-mob-orange-2x.png),
@@ -23,6 +24,30 @@
     background-repeat: no-repeat;
     background-position: top 132px left, top 7px right, bottom left 43px;
   }
+
+  // width: 100vw;
+  // height: 100%;
+  // margin: 0 auto;
+
+  // @media (max-width: 320px) {
+  //   background-image: url('../images/footer-bg/footer-mobile-1x.jpg');
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+
+  //   @include retina {
+  //     background-image: url('../images/footer-bg/footer-mobile-2x.jpg');
+  //   }
+  // }
+
+  // @media (min-width: 320px) {
+  //   background: url('/src/images/footer-bg/apple-mobile-1x.png') no-repeat left
+  //       25% scroll,
+  //     url('/src/images/footer-bg/bottom-mobile-1x.png') no-repeat center bottom
+  //       scroll,
+  //     url('/src/images/footer-bg/orange-mobile-1x.png') no-repeat right top
+  //       scroll;
+  // }
 
   &__container {
     @extend %container;
