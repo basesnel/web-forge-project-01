@@ -1,4 +1,6 @@
 .hero{
+    position: relative;
+
     padding-top: 60px;
     padding-bottom: 110px;
     max-width: 480px;
@@ -35,6 +37,7 @@
     }
 
     @media screen and (min-width:$desktop) {
+        padding-bottom: 38px;
         max-width: 1280px;
         background-image:
             url(../images/backgrounds/hero/back1-desk-1x.webp);
@@ -54,6 +57,16 @@
 
 .hero__container{
     @extend %container;
+
+    @media screen and (min-width:$desktop) {
+        display: flex;
+    }
+}
+
+.hero__bloс-text{
+    @media screen and (min-width:$desktop) {
+        margin-top: 159px;
+    }
 }
 
 .hero__title {
@@ -63,6 +76,21 @@
     font-size: 28px;
     line-height: 1.18;
     // color: $primaryTextColor;
+
+    @media screen and (min-width:$tablet) {
+        margin-bottom: 44px;
+        max-width: 540px;
+
+        font-size: 42px;
+        line-height: 1.2;
+    }
+    
+    @media screen and (min-width:$desktop) {
+        margin-bottom: 28px;
+        max-width: 500px;
+
+        font-size: 48px;
+    }
 }
 
 .hero__text{
@@ -72,6 +100,57 @@
     font-size: 14px;
     line-height: 1.5;
     // color: $primaryTextColor;
+
+    @media screen and (min-width:$tablet) {
+        margin-bottom: 40px;
+        max-width: 340px;
+
+        font-size: 16px;
+    }
+    
+    @media screen and (min-width:$desktop) {
+        max-width: 500px;
+
+    }
+}
+
+.hero__bloс-img{
+
+    @media screen and (min-width:$desktop) {
+        margin-left: auto;
+        display: flex;
+        
+    
+    }
+
+}
+
+.hero__picture {
+    @media screen and (min-width:$tablet) and (max-width:1279px) {
+        position: absolute;
+        right: 40px;
+        bottom: 37px;
+    }
+
+    @media screen and (min-width:$desktop) {
+        position: static;
+        padding: 14px;
+    }
+}
+
+.hero__img {
+    display: none;
+
+    @media screen and (min-width:$tablet) {
+        display: block;
+        border: 14px solid #FFE550;
+        border-radius: 50%;
+    }
+
+    @media screen and (min-width:$desktop) {
+
+        border: 26px solid #FFE550;
+    }
 }
 
 .button{
