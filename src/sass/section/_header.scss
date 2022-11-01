@@ -79,7 +79,9 @@
 }
 
 .menu-container {
+  
   @media (max-width:767px) {
+    z-index: 10;
     position: absolute;
     display: none;
     top: 50px;
