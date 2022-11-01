@@ -50,6 +50,14 @@
         background-position: right top, left bottom, left 19.5% bottom, left 40% bottom, right 40% bottom, right 12% bottom, right bottom;
       }
     }
+
+    @media (min-width: $desktop) {
+      max-width: $desktop;
+      background-image: url('../images/footer-bg/footer-desctop-1x.png');
+      background-repeat: no-repeat;
+      background-size: 1211px;
+      background-position: center;
+    }
   
 
   &__container {
