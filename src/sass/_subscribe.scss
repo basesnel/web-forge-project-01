@@ -1,69 +1,63 @@
 .subscribe {
-  
-  @extend %section; 
+  @extend %section;
   padding: 60px 0;
 
-
   &__img {
-  
-  @extend %img;
-  margin-bottom: 17px;
+    @extend %img;
+    margin-bottom: 17px;
   }
 
   &__container {
-  @extend %container;
-  
+    @extend %container;
   }
 
   &__title {
-  margin: 0;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.2;
-  color: $primaryTextColor;
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    color: $primaryTextColor;
   }
 
   &__text {
-  margin: 20px 0;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: $primaryTextColor;
+    margin: 20px 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $primaryTextColor;
   }
-
 }
 
 .subscribe-form {
   display: flex;
   flex-direction: column;
 
-
   &__input {
-  position: relative;
-  margin-bottom: 20px;
-  width: 279px;
-  height: 42px;
-  padding: 12px 11px;
+    position: relative;
+    margin-bottom: 20px;
+    width: 279px;
+    height: 42px;
+    padding: 12px 11px;
 
-  /* White */
-  background: $primaryWhiteColor;
-  /* Yellow main */
+    /* White */
+    background: $primaryWhiteColor;
+    /* Yellow main */
 
-  border: 1px solid $secondaryBackgroundYellow;
-  border-radius: 30px;
+    border: 1px solid $secondaryBackgroundYellow;
+    border-radius: 30px;
 
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.5;
-  /* Neutral/Dark gray */
-  color: #505050;
-}
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    /* Neutral/Dark gray */
+    color: #505050;
+  }
 }
 
 .subscribe-button {
@@ -77,11 +71,10 @@
 }
 
 .subscribe-button__text {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 1.5;
   color: $primaryTextColor;
 }
-
