@@ -51,10 +51,44 @@
       }
     }
   
+    @media (min-width: $desktop) {
+      max-width: $desktop;
+      background-image: url('../images/footer-bg/footer-desc-1x.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 1211px;
+      @include retina {
+        background-image: url('../images/footer-bg/footer-desc-2x.png');
+        background-repeat: no-repeat;
+        background-size: 1211px;
+        background-position: center;
+      }
+    }
 
   &__container {
     @extend %container;
-    padding: 0 20px;
+  }
+
+  &__link {
+    width: 69px;
+    display: inline-block;
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__label {
+    width: 100%;
+    margin-bottom: 12px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $primaryTextColor;
   }
 }
 
@@ -68,6 +102,11 @@
   @media (min-width: $tablet) {
     column-gap: 114px;
   }
+
+  @media (min-width: $desktop) {
+    flex-wrap: nowrap;
+    column-gap: 0;
+  }
 }
 
 .footer__block--second {
@@ -78,11 +117,6 @@
   }
 }
 
-.footer__link {
-  width: 69px;
-  display: inline-block;
-}
-
 .nav--footer {
   display: inline-block;
   width: 49px;
@@ -91,6 +125,11 @@
   @media (min-width: $tablet) {
     margin-top: 18px;
     width: 319px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 148px;
+    margin-right: 320px;
   }
 }
 
@@ -126,13 +165,10 @@
       margin-right: 28px;
     }
   }
-}
 
-.footer__form {
-  position: relative;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  &:hover, &:focus, &:active {
+    background-color: none;
+  }
 }
 
 .footer__input {
@@ -166,16 +202,6 @@
   }
 }
 
-.footer__label {
-  width: 100%;
-  margin-bottom: 12px;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: $primaryTextColor;
-}
-
 .footer__button {
   @extend %button;
   position: absolute;
@@ -204,6 +230,18 @@
 
 .footer__text {
   font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+
+  @media (min-width: $tablet) {
+    font-size: 12px;
+  }
+
+  @media (min-width: $desktop) {
+    display: inline-block;
+    position: absolute;
+    right: 140px;
+  }
 }
 
 .footer__link--additional {
@@ -211,6 +249,10 @@
   font-weight: 400;
   line-height: 1.2;
   color: $darkGreenColor;
+
+  @media (min-width: $tablet) {
+    font-size: 12px;
+  }
 }
 
 .footer__list {
@@ -226,6 +268,11 @@
     margin-right: 0;
     width: 264px;
     justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 80px;
+    width: 294px;
   }
 }
 
@@ -248,5 +295,10 @@
     right: 30px;
     bottom: 100px;
     margin-top: 0;
+    font-size: 12px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 16px;
   }
 }
