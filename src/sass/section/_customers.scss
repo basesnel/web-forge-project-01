@@ -1,7 +1,6 @@
 .customers {
   @extend %section;
   max-width: 480px;
-  padding-bottom: 60px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-repeat: no-repeat;
@@ -14,11 +13,32 @@
     background-image: url(../images/customers/bcgcustomers2x.png);
   }
   @include tablet {
-    padding: 60px 0 120px;
+    max-width: 768px;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-image: url(../images/customers/bcgcustomerstablet1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/customers/bcgcustomerstablet2x.png);
+  }
+    
   }
   @include desktop {
-    padding: 100px 0 255px;
+    max-width: 1200px;
+    padding-top: 100px;
+    padding-bottom: 255px;
     height: 652px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url(../images/customers/bcgcustomerdesk1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/customers/bcgcustomerdesk2x.png);
+  }
   }
 }
 .customers__container {
@@ -26,13 +46,21 @@
 }
 .customers__title {
   margin-bottom: 20px;
+  @media screen and (max-width: 767px){
+    font-weight: 700;
+font-size: 42px;
+line-height: 49px;
+  }
 }
-
 .customers__text {
-  max-width: 480px;
+   max-width: 480px;
   margin-bottom: 32px;
+  @media screen and (max-width: 767px){
+  font-size: 16px;
+  line-height: 19px;
 }
-
+  }
+ 
 .stars__list {
   @extend %list;
   display: flex;
@@ -41,29 +69,44 @@
 .reviews-list__item {
   padding: 8px;
   background-color: #ffff;
-  // max-width: 280px;
   border-radius: 0px 30px 30px 30px;
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
-}
+ 
+  @media screen and (min-width: 768px){
+    padding: 12px;
+}}
+
 .stars {
   margin-bottom: 36px;
 }
 .reviews-list {
   @extend %list;
+  display: flex;
+  gap: 32px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 24px;
+    
+  }
+  @include desktop {
+    max-width: 1141px;
+    gap: 139px;
+  }
 }
 
 .reviews-list__text {
-  width: 264px;
-  height: 95px;
+  // width: 264px;
+  // height: 95px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.19;
   color: #2c2c2c;
   margin-bottom: 32px;
+  @media screen and (max-width: 767px){
+    font-size: 18px;
+line-height: 21px;
+  }
 }
-
 .personaldate {
   display: block;
   padding-right: 18px;
