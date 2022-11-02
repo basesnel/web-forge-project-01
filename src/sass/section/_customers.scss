@@ -19,26 +19,25 @@
     background-position: bottom center;
     background-repeat: no-repeat;
     background-image: url(../images/customers/bcgcustomerstablet1x.png);
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/customers/bcgcustomerstablet2x.png);
-  }
-    
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/customers/bcgcustomerstablet2x.png);
+    }
   }
   @include desktop {
-    max-width: 1200px;
+    max-width: 1280px;
     padding-top: 100px;
     padding-bottom: 255px;
     height: 652px;
     background-position: top center;
     background-repeat: no-repeat;
     background-image: url(../images/customers/bcgcustomerdesk1x.png);
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/customers/bcgcustomerdesk2x.png);
-  }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/customers/bcgcustomerdesk2x.png);
+    }
   }
 }
 .customers__container {
@@ -46,21 +45,21 @@
 }
 .customers__title {
   margin-bottom: 20px;
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     font-weight: 700;
-font-size: 42px;
-line-height: 49px;
+    font-size: 42px;
+    line-height: 49px;
   }
 }
 .customers__text {
-   max-width: 480px;
+  max-width: 480px;
   margin-bottom: 32px;
-  @media screen and (max-width: 767px){
-  font-size: 16px;
-  line-height: 19px;
-}
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+    line-height: 19px;
   }
- 
+}
+
 .stars__list {
   @extend %list;
   display: flex;
@@ -70,10 +69,11 @@ line-height: 49px;
   padding: 8px;
   background-color: #ffff;
   border-radius: 0px 30px 30px 30px;
- 
-  @media screen and (min-width: 768px){
+
+  @media screen and (min-width: 768px) {
     padding: 12px;
-}}
+  }
+}
 
 .stars {
   margin-bottom: 36px;
@@ -86,7 +86,6 @@ line-height: 49px;
   @media screen and (max-width: 767px) {
     flex-direction: column;
     gap: 24px;
-    
   }
   @include desktop {
     max-width: 1141px;
@@ -102,9 +101,9 @@ line-height: 49px;
   line-height: 1.19;
   color: #2c2c2c;
   margin-bottom: 32px;
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     font-size: 18px;
-line-height: 21px;
+    line-height: 21px;
   }
 }
 .personaldate {
