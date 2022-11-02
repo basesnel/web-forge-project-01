@@ -165,6 +165,10 @@
       margin-right: 28px;
     }
   }
+
+  &:hover, &:focus, &:active {
+    background-color: none;
+  }
 }
 
 .footer__input {
