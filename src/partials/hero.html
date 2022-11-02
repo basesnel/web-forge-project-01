@@ -18,13 +18,30 @@
     <div class="hero__bloс-img">
       <picture class="hero__picture">
         <source srcset="
-          ./images/hero/foto_1.png 1x" media="(min-width:1280px)" />
+          ./images/hero/dish_1.png 1x,
+          ./images/hero/dish_1_2x.png 2x"
+           media="(min-width:1280px)" />
 
         <source srcset="
-          ./images/hero/foto_1_tablet.png 1x" media="(max-width:1279px)" />
+          ./images/hero/dish_1_tablet.png 1x,
+          ./images/hero/dish_1_tablet_2x.png 2x"
+           media="(max-width:1279px)" />
 
-        <img class="hero__img" src="./images/hero/foto_1.png" alt="комплексний обід 1">
+        <img class="hero__img" src="./images/hero/dish_1.png" alt="комплексний обід 1">
       </picture>
+
+      <button type="button" class="hero__btn-icon hero__btn-icon--left">
+        <svg width="16" height="29" class="hero__icon">
+          <use href="./images/svg/symbol-defs.svg#icon-vector-left"></use>
+        </svg>
+      </button>
+
+      <button type="button" class="hero__btn-icon hero__btn-icon--right">
+        <svg width="16" height="29" class="hero__icon">
+          <use href="./images/svg/symbol-defs.svg#icon-vector-right"></use>
+        </svg>
+      </button>
     </div>
+
   </div>
 </section>
