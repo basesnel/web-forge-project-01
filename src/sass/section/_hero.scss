@@ -1,14 +1,10 @@
 .hero{
-    position: relative;
-
+    @extend %section;
     padding-top: 60px;
     padding-bottom: 110px;
     max-width: 480px;
-    
-    margin: auto;
-
+      
     background-color: $mainBackgroundColor;
-
 
     background-image: url(../images/backgrounds/hero/back1-mob320-1x.webp);
 
@@ -26,7 +22,8 @@
     }
 
 
-    @media screen and (min-width:$tablet) {
+    @media screen and (min-width:$tablet) {  
+        position: relative;
         max-width: 768px;
         background-image:
             url(../images/backgrounds/hero/back1-tab-1x.webp);
@@ -43,12 +40,9 @@
             url(../images/backgrounds/hero/back1-desk-1x.webp);
 
         @include retina {
-                background-image: url(../images/backgrounds/hero/back1-desk-2x.webp);
+            background-image: url(../images/backgrounds/hero/back1-desk-2x.webp);
         }
     }
-
-
-
 
     background-size: contain;
     background-repeat: no-repeat;
@@ -60,6 +54,7 @@
 
     @media screen and (min-width:$desktop) {
         display: flex;
+        position: relative;
     }
 }
 
@@ -110,31 +105,30 @@
     
     @media screen and (min-width:$desktop) {
         max-width: 500px;
-
     }
 }
 
 .hero__bloс-img{
 
-    @media screen and (min-width:$desktop) {
-        margin-left: auto;
-        display: flex;
-        
-    
+    @media screen and (min-width:$tablet) and (max-width:1279px) {
+        position: absolute;
+        right: 26px;
+        bottom: 23px;
+        padding: 9px;
     }
-
+    
+    @media screen and (min-width:$desktop) {
+        position: relative;
+        margin-left: auto;
+        display: flex;    
+        padding: 14px;
+    }
 }
 
 .hero__picture {
-    @media screen and (min-width:$tablet) and (max-width:1279px) {
-        position: absolute;
-        right: 40px;
-        bottom: 37px;
-    }
 
     @media screen and (min-width:$desktop) {
         position: static;
-        padding: 14px;
     }
 }
 
@@ -143,33 +137,83 @@
 
     @media screen and (min-width:$tablet) {
         display: block;
-        border: 14px solid #FFE550;
+        border: 14px solid $secondaryBackgroundYellow;
         border-radius: 50%;
     }
 
     @media screen and (min-width:$desktop) {
-
-        border: 26px solid #FFE550;
+        border: 26px solid $secondaryBackgroundYellow;
     }
 }
 
-.button{
+.hero__btn-icon{
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+
     @extend %button;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
-    padding: 6px 18px;
-
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.5;
-    color: $primaryTextColor;
-    background-color: $accentColor;
-    border-radius: 30px;
-    border: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
     
+    border-radius: 4px;
+    border: none;
+    background-color: $primaryWhiteColor;
+    box-shadow:4px 0 4px rgba(0, 0, 0, 0.06);
+
+    @media screen and (min-width:$desktop) {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+       
+    &--left{
+        left: 0;
+        padding-right: 13px;
+        padding-left: 9px;
+
+        @media screen and (min-width:$desktop){
+            padding-right: 18px;
+            padding-left: 14px;
+        }
+    }
+
+    &--right{
+        right: 0;
+        padding-right: 9px;
+        padding-left: 13px;
+
+        @media screen and (min-width:$desktop) {
+            padding-right: 14px;
+            padding-left: 18px;
+        }
+    }
+
+    &:hover,
+    &:focus{
+        color: $darkGreenColor;
+    }
+
     &:active{
-        background-color: $accentHoverColor;
+        color: $primaryTextColor;
+        box-shadow: 4px 0 4px rgba(0, 0, 0, 0.16);
     }
 }
+
+.hero__icon{
+    fill: currentColor;
+    display: block;
+    width: 12px;
+    height: 20px;
+
+   @media screen and (min-width:$desktop) {
+        width: 16px;
+        height: 28px;
+    }
+}
+    
 
 // *{
 //     outline: 1px solid tomato;
