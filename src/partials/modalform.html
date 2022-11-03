@@ -1,0 +1,81 @@
+<div class="backdrop backdrop--is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal__close" data-modal-close>
+      <svg class="modal__icon" width="24" height="24">
+        <use href="./images/svg/symbol-defs.svg#icon-cross"></use>
+      </svg>
+    </button>
+
+    <div class="orderform">
+      <p class="orderform__title">order form</p>
+      <form
+        class="orderform__form js-speaker-form"
+        data-modal
+        autocomplete="off"
+      >
+        <label class="orderform__field">
+          <span class="orderform__label">Name</span>
+          <div class="orderform__wrap-input">
+            <input
+              type="text"
+              name="name"
+              class="orderform__input"
+              placeholder="Your name"
+              pattern="\w{3,10}"
+              required
+              autofocus
+            />
+            <span class="orderform__warning">
+              <svg class="orderform__icon" width="12" height="12">
+                <use href="./images/svg/symbol-defs.svg#warning"></use>
+              </svg>
+              The name must be between 3 and 25 characters</span
+            >
+          </div>
+        </label>
+
+        <label class="orderform__field">
+          <span class="orderform__label">Phone number</span>
+          <div class="orderform__wrap-input">
+            <input
+              type="tel"
+              name="tel"
+              class="orderform__input"
+              placeholder="+38(0_ _) _ _ _ _ _ _ _"
+              pattern="\d{10}"
+              required
+            />
+            <span class="orderform__warning">
+              <svg class="orderform__icon" width="12" height="12">
+                <use href="./images/svg/symbol-defs.svg#warning"></use>
+              </svg>
+              This phone must be in the format 099 000 00 00</span
+            >
+          </div>
+        </label>
+
+        <label class="orderform__field">
+          <span class="orderform__label">E-mail</span>
+          <div class="orderform__wrap-input">
+            <input
+              type="email"
+              name="email"
+              class="orderform__input"
+              placeholder="example@gmail.com"
+              required
+            />
+            <span class="orderform__warning"
+              ><svg class="orderform__icon" width="12" height="12">
+                <use href="./images/svg/symbol-defs.svg#warning"></use>
+              </svg>
+              Please enter a valid email address</span
+            >
+          </div>
+        </label>
+        <div class="orderform__field orderform__field--submit">
+          <button type="submit" class="orderform__btn-submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
