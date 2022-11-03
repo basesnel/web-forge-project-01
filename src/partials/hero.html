@@ -1,6 +1,5 @@
 <section class="hero" id="hero">
   <div class="hero__container">
-
     <div class="hero__bloс-text">
       <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
 
@@ -10,24 +9,35 @@
         ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
       </p>
 
-      <button type="button" class="order-button order-button--green hero-button">
+      <button
+        type="button"
+        class="order-button order-button--green hero-button"
+        data-modal-nepo
+      >
         Order Now
       </button>
     </div>
 
     <div class="hero__bloс-img">
       <picture class="hero__picture">
-        <source srcset="
-          ./images/hero/dish_1.png 1x,
-          ./images/hero/dish_1_2x.png 2x"
-           media="(min-width:1280px)" />
+        <source
+          srcset="./images/hero/dish_1.png 1x, ./images/hero/dish_1_2x.png 2x"
+          media="(min-width:1280px)"
+        />
 
-        <source srcset="
-          ./images/hero/dish_1_tablet.png 1x,
-          ./images/hero/dish_1_tablet_2x.png 2x"
-           media="(max-width:1279px)" />
+        <source
+          srcset="
+            ./images/hero/dish_1_tablet.png    1x,
+            ./images/hero/dish_1_tablet_2x.png 2x
+          "
+          media="(max-width:1279px)"
+        />
 
-        <img class="hero__img" src="./images/hero/dish_1.png" alt="комплексний обід 1">
+        <img
+          class="hero__img"
+          src="./images/hero/dish_1.png"
+          alt="комплексний обід 1"
+        />
       </picture>
 
       <button type="button" class="hero__btn-icon hero__btn-icon--left">
@@ -42,6 +52,5 @@
         </svg>
       </button>
     </div>
-
   </div>
 </section>

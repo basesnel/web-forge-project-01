@@ -1,0 +1,96 @@
+.orderform {
+  position: relative;
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__field {
+    display: block;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  &__field--submit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  &__label {
+    margin: 2px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4em;
+    position: relative;
+    left: 12px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 48px;
+    // border: 1px solid rgba(18, 18, 18, 0.12);
+    border: 1px solid $darkGreenColor;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    padding: 14px 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $primaryTextColor;
+  }
+
+  &__input::placeholder {
+    color: #c4c4c4;
+  }
+
+  &__input:not(:placeholder-shown):required:valid {
+    border: 1px solid $darkGreenColor;
+  }
+
+  &__input:not(:placeholder-shown):required:invalid {
+    border: 1px solid #ff705d;
+  }
+
+  &__icon {
+    fill: #ff705d;
+  }
+
+  &__btn-submit {
+    @extend %button;
+    padding: 10px 38px;
+    border: 2px solid $darkGreenColor;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+    color: $primaryTextColor;
+
+    &:hover {
+      background-color: $accentColor;
+    }
+  }
+}
+
+.orderform__warning {
+  display: flex;
+  gap: 4px;
+  margin-left: 12px;
+  text-align: center;
+  position: absolute;
+  top: 72px;
+  color: #ff705d;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.4em;
+  opacity: 0;
+
+  .orderform__input:not(:placeholder-shown):required:invalid + & {
+    opacity: 1;
+  }
+}
