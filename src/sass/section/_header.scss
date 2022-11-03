@@ -1,8 +1,9 @@
 .header {
-  position: relative;
+  position: fixed;
   z-index: 5;
-  background: $mainBackgroundColor;
-  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  background: $secondaryWhiteColor; 
+  width: 100%;
+  box-shadow: 0 4px 24px #6969691a;
 }
 
 .header{
@@ -31,19 +32,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // padding: 10px 20px;
 }
-
-// .button.appears {
-//   display: none;
-// }
-
-// .button.appears {
-//   @media (min-width:$tablet) {
-//     display: block;
-//     margin-left: 30px;  
-//   }
-// }
 
 .menu-toggle {
   display: inline-flex;
@@ -130,6 +119,7 @@
       padding: 0;
     }
 
+
     &__link {
       display: block;
       font-size: 16px;
@@ -161,6 +151,14 @@
     }
   }
 }
+
+.nav {
+  @media (min-width:768px) {
+        &__link {
+          padding: 28px 0px;
+        }
+      }
+  }
 
 .nav__item {
   @media (max-width:767px) {
