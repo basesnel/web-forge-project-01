@@ -63,6 +63,7 @@
 .stars__list {
   @extend %list;
   display: flex;
+  margin-bottom: 36px;
 }
 
 .reviews-list__item {
@@ -75,9 +76,6 @@
   }
 }
 
-.stars {
-  margin-bottom: 36px;
-}
 .reviews-list {
   @extend %list;
   display: flex;
