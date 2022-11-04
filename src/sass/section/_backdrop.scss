@@ -8,8 +8,10 @@
   padding: 40px 15px;
   background: rgba(94, 99, 99, 0.7);
   opacity: 1;
+  visibility: visible;
   z-index: 100;
-  // transition: opacity $animation-time $animation-function;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
 
   &--is-hidden {
