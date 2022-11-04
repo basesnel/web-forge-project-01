@@ -19,38 +19,69 @@
     </div>
 
     <div class="hero__bloс-img">
-      <picture class="hero__picture">
-        <source
-          srcset="./images/hero/dish_1.png 1x, ./images/hero/dish_1_2x.png 2x"
-          media="(min-width:1280px)"
-        />
+      <div id="slides">
+        <picture class="slide showing">
+          <source
+            srcset="
+            ./images/hero/dish_1.png 1x, 
+            ./images/hero/dish_1_2x.png 2x"
+            media="(min-width:1280px)"
+          />
+          <source
+            srcset="
+            ./images/hero/dish_1_tablet.png 1x,
+            ./images/hero/dish_1_tablet_2x.png 2x"
+            media="(max-width:1279px)"
+          />
+          <img
+            class="hero__img" src="./images/hero/dish_1.png" alt="комплексний обід 1"
+          />
+        </picture>
 
-        <source
-          srcset="
-            ./images/hero/dish_1_tablet.png    1x,
-            ./images/hero/dish_1_tablet_2x.png 2x
-          "
-          media="(max-width:1279px)"
-        />
+        <picture class="slide">
+          <source srcset="
+            ./images/hero/dish_2.png 1x,
+            ./images/hero/dish_2_2x.png 2x" 
+            media="(min-width:1280px)" 
+          />
+          <source srcset="
+            ./images/hero/dish_2_tablet.png 1x,
+            ./images/hero/dish_2_tablet_2x.png 2x"
+            media="(max-width:1279px)" 
+          />
+          <img class="hero__img" src="./images/hero/dish_2.png" alt="комплексний обід 2" />
+        </picture>
 
-        <img
-          class="hero__img"
-          src="./images/hero/dish_1.png"
-          alt="комплексний обід 1"
-        />
-      </picture>
+        <picture class="slide">
+          <source srcset="
+            ./images/hero/dish_3.png 1x, 
+            ./images/hero/dish_3_2x.png 2x" 
+            media="(min-width:1280px)" 
+          />
+          <source srcset="
+            ./images/hero/dish_3_tablet.png    1x,
+            ./images/hero/dish_3_tablet_2x.png 2x
+            " media="(max-width:1279px)" 
+          />
+          <img class="hero__img" src="./images/hero/dish_3.png" alt="комплексний обід 3" />
+        </picture>
+      </div>
 
-      <button type="button" class="hero__btn-icon hero__btn-icon--left">
+      <button type="button" class="controls hero__btn-icon hero__btn-icon--left" 
+      id="previous">
         <svg width="16" height="29" class="hero__icon">
           <use href="./images/svg/symbol-defs.svg#icon-vector-left"></use>
         </svg>
       </button>
 
-      <button type="button" class="hero__btn-icon hero__btn-icon--right">
+      <button type="button" class="controls hero__btn-icon hero__btn-icon--right" 
+      id="next" >
         <svg width="16" height="29" class="hero__icon">
           <use href="./images/svg/symbol-defs.svg#icon-vector-right"></use>
         </svg>
       </button>
+
+      <button class="controls hiden" id="pause">&#10074;&#10074;</button>
     </div>
   </div>
 </section>

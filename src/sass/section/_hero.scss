@@ -1,5 +1,9 @@
 .hero{
+
     @extend %section;
+
+    position: relative;
+
     padding-top: calc(60px + 72px);
     padding-bottom: 110px;
     max-width: 480px;
@@ -110,52 +114,106 @@
 }
 
 .hero__bloс-img{
+   
+    @media screen and (min-width:$tablet) {
 
-    @media screen and (min-width:$tablet) and (max-width:1279px) {
         position: absolute;
         right: 26px;
-        bottom: 23px;
-        padding: 9px;
-    }
-    
-    @media screen and (min-width:$desktop) {
-        position: relative;
-        margin-left: auto;
-        display: flex;    
-        padding: 14px;
-    }
-}
-
-.hero__picture {
-
-    @media screen and (min-width:$desktop) {
-        position: static;
-    }
-}
-
-.hero__img {
-    display: none;
-
-    @media screen and (min-width:$tablet) {
-        display: block;
+        bottom: 36px;
+        margin-right: 9px;
+        width: 320px;
+        height: 320px;
         border: 14px solid $secondaryBackgroundYellow;
         border-radius: 50%;
     }
 
     @media screen and (min-width:$desktop) {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        margin-top: 14px;
+        margin-left: auto;
+        margin-right: 14px;
+        width: 580px;
+        height: 580px;
         border: 26px solid $secondaryBackgroundYellow;
     }
+
+        
 }
 
-.hero__btn-icon{
+#slides {
+   
+    @media screen and (min-width:$tablet) {
+        position: relative;
+        height: 292px;
+        width: 292px;
+        border-radius: 50%;
+        margin-top: 0;
+        list-style-type: none;
+        text-align: center;
+    }
+
+    @media screen and (min-width:$desktop) {
+        position: relative;
+        height: 528px;
+        width: 528px;
+        border-radius: 50%;
+        margin-top: 0;
+        list-style-type: none;
+        text-align: center;
+    }
+
+    
+}
+
+.slide{
+
     @media screen and (max-width:767px) {
         display: none;
     }
 
-    @extend %button;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 0;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+
+    
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+
+
+.hero__btn-icon{
+   
+
+    @extend %button;
+    
+    @media screen and (max-width:767px) {
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+    }
 
     padding-top: 4px;
     padding-bottom: 4px;
@@ -167,28 +225,37 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
+    @media screen and (min-width:$tablet){
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
     @media screen and (min-width:$desktop) {
         padding-top: 6px;
         padding-bottom: 6px;
     }
        
     &--left{
-        left: 0;
+        left: -22px;
         padding-right: 13px;
         padding-left: 9px;
 
         @media screen and (min-width:$desktop){
+            margin-left: -18px;
             padding-right: 18px;
             padding-left: 14px;
         }
     }
 
     &--right{
-        right: 0;
+        right: -22px;
         padding-right: 9px;
         padding-left: 13px;
 
         @media screen and (min-width:$desktop) {
+            margin-right: -18px;
             padding-right: 14px;
             padding-left: 18px;
         }
@@ -205,6 +272,9 @@
     }
 }
 
+
+
+
 .hero__icon{
     fill: currentColor;
     display: block;
@@ -216,7 +286,14 @@
         height: 28px;
     }
 }
+
+
     
+.hiden{
+    @extend %visually-hidden;
+}
+    
+
 
 // *{
 //     outline: 1px solid tomato;
