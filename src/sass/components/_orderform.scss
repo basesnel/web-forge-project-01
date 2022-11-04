@@ -51,9 +51,10 @@
     }
   }
 
-  // &__input::placeholder {
-  // color: #c4c4c4;
-  // }
+  &__input::placeholder {
+    color: #c4c4c4;
+    opacity: 0;
+  }
 
   &__input:not(:placeholder-shown):required:valid {
     border: 1px solid $darkGreenHoverColor;
