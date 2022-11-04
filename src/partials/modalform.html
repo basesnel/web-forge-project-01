@@ -15,65 +15,59 @@
       >
         <label class="orderform__field">
           <span class="orderform__label">Name</span>
-          <div class="orderform__wrap-input">
-            <input
-              type="text"
-              name="name"
-              class="orderform__input .name-field"
-              placeholder=" "
-              pattern="\w{3,10}"
-              required
-              autofocus
-            />
-            <span class="orderform__warning">
-              <svg class="orderform__icon" width="12" height="12">
-                <use href="./images/svg/symbol-defs.svg#warning"></use>
-              </svg>
-              The name must be between 3 and 25 characters</span
-            >
-            <span class="orderform__prompt">Your name</span>
-          </div>
+          <input
+            type="text"
+            name="name"
+            class="orderform__input .name-field"
+            placeholder=" "
+            pattern="\w{3,10}"
+            required
+            autofocus
+          />
+          <span class="orderform__warning">
+            <svg class="orderform__icon" width="12" height="12">
+              <use href="./images/svg/symbol-defs.svg#warning"></use>
+            </svg>
+            The name must be between 3 and 25 characters</span
+          >
+          <span class="orderform__prompt">Your name</span>
         </label>
 
         <label class="orderform__field">
           <span class="orderform__label">Phone number</span>
-          <div class="orderform__wrap-input">
-            <input
-              type="tel"
-              name="tel"
-              class="orderform__input tel-field"
-              placeholder=" "
-              pattern="\+[0-9]{2}\s\([0-9]{3}\)\s[0-9]{3}.[0-9]{2}.[0-9]{2}"
-              required
-            />
-            <span class="orderform__warning">
-              <svg class="orderform__icon" width="12" height="12">
-                <use href="./images/svg/symbol-defs.svg#warning"></use>
-              </svg>
-              This phone must be in the format +38 (099) 000-00-00</span
-            >
-            <span class="orderform__prompt">+38 (0_ _) _ _ _-_ _-_ _</span>
-          </div>
+          <input
+            type="tel"
+            name="tel"
+            class="orderform__input tel-field"
+            placeholder=" "
+            pattern="\+[0-9]{2}\s\([0-9]{3}\)\s[0-9]{3}.[0-9]{2}.[0-9]{2}"
+            required
+          />
+          <span class="orderform__warning">
+            <svg class="orderform__icon" width="12" height="12">
+              <use href="./images/svg/symbol-defs.svg#warning"></use>
+            </svg>
+            This phone must be in the format +38 (099) 000-00-00</span
+          >
+          <span class="orderform__prompt">+38 (0_ _) _ _ _-_ _-_ _</span>
         </label>
 
         <label class="orderform__field">
           <span class="orderform__label">E-mail</span>
-          <div class="orderform__wrap-input">
-            <input
-              type="email"
-              name="email"
-              class="orderform__input email-field"
-              placeholder=" "
-              required
-            />
-            <span class="orderform__warning"
-              ><svg class="orderform__icon" width="12" height="12">
-                <use href="./images/svg/symbol-defs.svg#warning"></use>
-              </svg>
-              Please enter a valid email address</span
-            >
-            <span class="orderform__prompt">example@gmail.com</span>
-          </div>
+          <input
+            type="email"
+            name="email"
+            class="orderform__input email-field"
+            placeholder=" "
+            required
+          />
+          <span class="orderform__warning"
+            ><svg class="orderform__icon" width="12" height="12">
+              <use href="./images/svg/symbol-defs.svg#warning"></use>
+            </svg>
+            Please enter a valid email address</span
+          >
+          <span class="orderform__prompt">example@gmail.com</span>
         </label>
         <div class="orderform__field orderform__field--submit">
           <button type="submit" class="orderform__btn-submit">Send</button>
