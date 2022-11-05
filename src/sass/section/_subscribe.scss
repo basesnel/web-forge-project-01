@@ -9,9 +9,7 @@
 
   @media screen and (min-width: 1280px) {
     padding-top: 0;
-    
   }
-
 
   &__thumb {
     width: 140px;
@@ -28,7 +26,6 @@
 
     @media screen and (min-width: 480px) {
       top: -50%;
-     
     }
 
     @media screen and (min-width: 768px) {
@@ -43,10 +40,16 @@
       top: -45%;
       left: 55%;
       transform: translateX(0);
+      transition: transform 1500ms cubic-bezier(0.28, 0.06, 0.43, 1);
+      transform-origin: center left;
     }
   }
 
-  &__img {  
+  &__thumb:hover {
+    transform: scale(108%);
+  }
+
+  &__img {
     @extend %img;
     @media screen and (min-width: 320px) {
       width: 100%;
@@ -54,22 +57,17 @@
 
     @media screen and (min-width: 768px) {
       width: 100%;
-     
     }
-
-    
   }
 
   &__container {
     position: relative;
     @extend %container;
-
-   
   }
 
   &__title {
     display: inline-block;
-        
+
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 28px;
@@ -155,7 +153,6 @@
   &:hover,
   &:focus {
     background-color: $accentHoverColor;
-    
   }
 }
 
