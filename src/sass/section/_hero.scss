@@ -201,6 +201,8 @@
    
 
     @extend %button;
+
+
     
     @media screen and (max-width:767px) {
         position: absolute;
@@ -212,20 +214,21 @@
         padding: 0;
         clip: rect(0 0 0 0);
         clip-path: inset(50%);
-        margin: -1px;
+        margin: 1px;
     }
 
-    padding-top: 4px;
-    padding-bottom: 4px;
     
-    border-radius: 4px;
-    border: none;
-    background-color: $primaryWhiteColor;
-    box-shadow:4px 0 4px rgba(0, 0, 0, 0.06);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
     @media screen and (min-width:$tablet){
+        padding-top: 4px;
+            padding-bottom: 4px;
+        
+            border-radius: 4px;
+            border: none;
+            background-color: $primaryWhiteColor;
+            box-shadow: 4px 0 4px rgba(0, 0, 0, 0.06);
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -238,6 +241,9 @@
     }
        
     &--left{
+        @media screen and (max-width:767px){
+            left: 20vw;
+        }
         left: -22px;
         padding-right: 13px;
         padding-left: 9px;
@@ -250,6 +256,9 @@
     }
 
     &--right{
+        @media screen and (max-width:767px) {
+                right: 20vw;
+            }
         right: -22px;
         padding-right: 9px;
         padding-left: 13px;
@@ -290,6 +299,7 @@
 
     
 .hiden{
+    left: 20vw;
     @extend %visually-hidden;
 }
     
