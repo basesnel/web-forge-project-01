@@ -46,7 +46,9 @@
   }
 
   &__thumb:hover {
-    transform: scale(108%);
+    @media screen and (min-width: 1280px) {
+      transform: scale(108%);
+    }
   }
 
   &__img {
