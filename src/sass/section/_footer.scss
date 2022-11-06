@@ -298,7 +298,8 @@
   text-align: center;
 
   @include tablet {
-    position: absolute;
+    // position: absolute;
+    text-align: right;
     right: 30px;
     bottom: 100px;
     margin-top: 0;
