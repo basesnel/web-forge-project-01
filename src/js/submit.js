@@ -15,6 +15,11 @@ function validateName(nameFd) {
   return re.test(String(nameFd).toLocaleLowerCase());
 }
 
+function validatePhone(phone) {
+  let re = /^\+[0-9]{2}\s\([0-9]{3}\)\s[0-9]{3}.[0-9]{2}.[0-9]{2}$/;
+  return re.test(String(phone).toLocaleLowerCase());
+}
+
 form.onsubmit = function () {
   let nameVal = nameField.value,
     telVal = telField.value,
@@ -36,20 +41,28 @@ form.onsubmit = function () {
   });
 
   if (emptyInputs.length !== 0) {
-    console.log('Inputs not field');
+    // console.log('Inputs not field');
     return false;
   }
 
   if (!validateName(nameVal)) {
-    console.log('Name not valid.');
+    // console.log('Name not valid.');
     nameField.classList.add('orderform__input--warning');
     return false;
   } else {
     nameField.classList.remove('orderform__input--warning');
   }
 
+  if (!validatePhone(telVal)) {
+    // console.log('Phone not valid.');
+    telField.classList.add('orderform__input--warning');
+    return false;
+  } else {
+    telField.classList.remove('orderform__input--warning');
+  }
+
   if (!validateEmail(emailVal)) {
-    console.log('Email not valid.');
+    // console.log('Email not valid.');
     emailField.classList.add('orderform__input--warning');
     return false;
   } else {
