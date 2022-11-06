@@ -17,11 +17,9 @@
           <span class="orderform__label">Name</span>
           <input
             type="text"
-            name="name"
-            class="orderform__input name-field"
+            name="yourname"
+            class="orderform__input namefield"
             placeholder="Your name"
-            pattern="\w{3,10}"
-            required
             autofocus
           />
           <span class="orderform__warning">
@@ -38,10 +36,9 @@
           <input
             type="tel"
             name="tel"
-            class="orderform__input tel-field"
+            class="orderform__input telfield"
             placeholder="+38 (0_ _) _ _ _-_ _-_ _"
             pattern="\+[0-9]{2}\s\([0-9]{3}\)\s[0-9]{3}.[0-9]{2}.[0-9]{2}"
-            required
           />
           <span class="orderform__warning">
             <svg class="orderform__icon" width="12" height="12">
@@ -57,9 +54,8 @@
           <input
             type="email"
             name="email"
-            class="orderform__input email-field"
+            class="orderform__input emailfield"
             placeholder="example@gmail.com"
-            required
           />
           <span class="orderform__warning"
             ><svg class="orderform__icon" width="12" height="12">
@@ -71,6 +67,7 @@
         </label>
         <div class="orderform__field orderform__field--submit">
           <button type="submit" class="orderform__btn-submit">Send</button>
+          <span class="orderform__submitwarn">All dields are required</span>
         </div>
       </form>
     </div>

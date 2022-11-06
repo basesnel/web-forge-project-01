@@ -1,54 +1,60 @@
-(() => {
-  document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-    e.preventDefault();
+let form = document.querySelector('.orderform__form'),
+  fields = form.querySelectorAll('.orderform__input'),
+  nameField = form.querySelector('.namefield'),
+  telField = form.querySelector('.telfield'),
+  emailField = form.querySelector('.emailfield'),
+  submitBtn = form.querySelector('.orderform__btn-submit');
 
-    new FormData(e.currentTarget).forEach((value, name) =>
-      console.log(`${name}: ${value}`)
-    );
+function validateEmail(email) {
+  let re = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  return re.test(String(email).toLocaleLowerCase());
+}
 
-    e.currentTarget.reset();
+function validateName(nameFd) {
+  let re = /^(\w{3,25})$/;
+  return re.test(String(nameFd).toLocaleLowerCase());
+}
+
+form.onsubmit = function () {
+  let nameVal = nameField.value,
+    telVal = telField.value,
+    emailVal = emailField.value,
+    namelVal = nameField.value,
+    emptyInputs = Array.from(fields).filter(input => input.value === '');
+
+  fields.forEach(function (input) {
+    if (input.value == '') {
+      // console.log('Field empty');
+      submitBtn.classList.add('orderform__btn-submit--warning');
+      input.classList.add('orderform__input--warning');
+      // submitBtn.disabled = true;
+    } else {
+      // console.log('Not empty');
+      submitBtn.classList.remove('orderform__btn-submit--warning');
+      input.classList.remove('orderform__input--warning');
+    }
   });
-})();
 
-// // (() => {
-// var form = document.querySelector('.js-speaker-form');
-// var validateBtn = form.querySelector('.orderform__btn-submit');
-// // var yourname = form.querySelector('.name-field');
-// // var tel = form.querySelector('.tel-field');
-// // var email = form.querySelector('.email-field');
-// var fields = form.querySelectorAll('.orderform__input');
+  if (emptyInputs.length !== 0) {
+    console.log('Inputs not field');
+    return false;
+  }
 
-// form.addEventListener('submit', function (event) {
-//   event.preventDefault();
-//   console.log('clicked on validate');
+  if (!validateName(nameVal)) {
+    console.log('Name not valid.');
+    nameField.classList.add('orderform__input--warning');
+    return false;
+  } else {
+    nameField.classList.remove('orderform__input--warning');
+  }
 
-//   for (var i = 0; i < fields.length; i++) {
-//     if (!fields[i].value) {
-//       console.log('field is blank', fields[i]);
-//     }
-//   }
-//   // console.log('name: ', yourname.value);
-//   // console.log('tel: ', tel.value);
-//   // console.log('email: ', email.value);
-// });
+  if (!validateEmail(emailVal)) {
+    console.log('Email not valid.');
+    emailField.classList.add('orderform__input--warning');
+    return false;
+  } else {
+    emailField.classList.remove('orderform__input--warning');
+  }
 
-// // let fields = document
-// //   .querySelector('.js-speaker-form')
-// //   .querySelectorAll('.orderform__input');
-
-// // document.querySelector('.js-speaker-form').addEventListener('submit', e => {
-// //   e.preventDefault();
-
-// //   for (var i = 0; i < fields.length; i++) {
-// //     if (!fields[i].value) {
-// //       console.log('field is blank', fields[i]);
-// //     }
-// //   }
-
-// //   new FormData(e.currentTarget).forEach((value, name) =>
-// //     console.log(`${name}: ${value}`)
-// //   );
-
-// //   e.currentTarget.reset();
-// // });
-// // })();
+  return false;
+};

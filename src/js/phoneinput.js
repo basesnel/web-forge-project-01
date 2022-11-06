@@ -1,5 +1,5 @@
 //Задаем инпут
-let input = document.querySelector('.tel-field');
+let input = document.querySelector('.telfield');
 
 //Функция маски инпута
 function setMask(event) {
