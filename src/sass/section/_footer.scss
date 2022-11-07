@@ -7,62 +7,64 @@
   box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
 
   @media (max-width: $tablet) {
-  max-width: $mobile;
-  background-image: url(../images/footer-bg/footer-mob-apple-1x.png),
-    url(../images/footer-bg/footer-mob-orange-1x.png),
-    url(../images/footer-bg/footer-mob-downgroup-1x.png);
-  background-size: 110px, 104px, 253px;
-  background-repeat: no-repeat;
-  background-position: top 132px left, top 7px right, center bottom;
-  @include retina {
-    background-image: url(../images/footer-bg/footer-mob-apple-2x.png),
-      url(../images/footer-bg/footer-mob-orange-2x.png),
-      url(../images/footer-bg/footer-mob-downgroup-2x.png);
+    max-width: $mobile;
+    background-image: url(../images/footer-bg/footer-mob-apple-1x.png),
+      url(../images/footer-bg/footer-mob-orange-1x.png),
+      url(../images/footer-bg/footer-mob-downgroup-1x.png);
     background-size: 110px, 104px, 253px;
     background-repeat: no-repeat;
     background-position: top 132px left, top 7px right, center bottom;
+    @include retina {
+      background-image: url(../images/footer-bg/footer-mob-apple-2x.png),
+        url(../images/footer-bg/footer-mob-orange-2x.png),
+        url(../images/footer-bg/footer-mob-downgroup-2x.png);
+      background-size: 110px, 104px, 253px;
+      background-repeat: no-repeat;
+      background-position: top 132px left, top 7px right, center bottom;
+    }
   }
-}
 
-    @include tablet {
-      max-width: $tablet;
-      padding: 100px 0;
-      background-image: url('../images/footer-bg/orange-left-right-1x.png'),
-        url('../images/footer-bg/orange-bottom-tab-1x.png'),
-        url('../images/footer-bg/bottom1-tab-1x.png'),
-        url('../images/footer-bg/apple-center-tab-1x.png'),
-        url('../images/footer-bg/banana-tab-1x.png'),
-        url('../images/footer-bg/space-tab-1x.png'),
-        url('../images/footer-bg/apple-right-tab-1x.png');
+  @include tablet {
+    max-width: $tablet;
+    padding: 100px 0;
+    background-image: url('../images/footer-bg/orange-left-right-1x.png'),
+      url('../images/footer-bg/orange-bottom-tab-1x.png'),
+      url('../images/footer-bg/bottom1-tab-1x.png'),
+      url('../images/footer-bg/apple-center-tab-1x.png'),
+      url('../images/footer-bg/banana-tab-1x.png'),
+      url('../images/footer-bg/space-tab-1x.png'),
+      url('../images/footer-bg/apple-right-tab-1x.png');
+    background-size: 203px, 184px, 168px, 153.25px, 221px, 171px, 170px;
+    background-repeat: no-repeat;
+    background-position: right top, left bottom, left 19.5% bottom,
+      left 40% bottom, right 40% bottom, right 12% bottom, right bottom;
+    @include retina {
+      background-image: url('../images/footer-bg/orange-left-right-2x.png'),
+        url('../images/footer-bg/orange-bottom-tab-2x.png'),
+        url('../images/footer-bg/bottom1-tab-2x.png'),
+        url('../images/footer-bg/apple-center-tab-2x.png'),
+        url('../images/footer-bg/banana-tab-2x.png'),
+        url('../images/footer-bg/space-tab-2x.png'),
+        url('../images/footer-bg/apple-right-tab-2x.png');
       background-size: 203px, 184px, 168px, 153.25px, 221px, 171px, 170px;
       background-repeat: no-repeat;
-      background-position: right top, left bottom, left 19.5% bottom, left 40% bottom, right 40% bottom, right 12% bottom, right bottom;
-      @include retina {
-        background-image: url('../images/footer-bg/orange-left-right-2x.png'),
-          url('../images/footer-bg/orange-bottom-tab-2x.png'),
-          url('../images/footer-bg/bottom1-tab-2x.png'),
-          url('../images/footer-bg/apple-center-tab-2x.png'),
-          url('../images/footer-bg/banana-tab-2x.png'),
-          url('../images/footer-bg/space-tab-2x.png'),
-          url('../images/footer-bg/apple-right-tab-2x.png');
-        background-size: 203px, 184px, 168px, 153.25px, 221px, 171px, 170px;
-        background-repeat: no-repeat;
-        background-position: right top, left bottom, left 19.5% bottom, left 40% bottom, right 40% bottom, right 12% bottom, right bottom;
-      }
+      background-position: right top, left bottom, left 19.5% bottom,
+        left 40% bottom, right 40% bottom, right 12% bottom, right bottom;
     }
-  
-    @include desktop {
-      max-width: 100vw;
-      background-image: url('/src/images/footer-bg/footer-desc-1x.png');
+  }
+
+  @include desktop {
+    max-width: 100vw;
+    background-image: url('/src/images/footer-bg/footer-desc-1x.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 1211px;
+    @include retina {
+      background-image: url('../images/footer-bg/footer-desc-2x.png');
       background-repeat: no-repeat;
-      background-position: bottom;
       background-size: 1211px;
-      @include retina {
-        background-image: url('../images/footer-bg/footer-desc-2x.png');
-        background-repeat: no-repeat;
-        background-size: 1211px;
-      }
     }
+  }
 
   &__container {
     @extend %container;
@@ -171,7 +173,9 @@
     }
   }
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     background-color: none;
     color: $darkGreenColor;
   }
@@ -251,6 +255,16 @@
   }
 }
 
+.footer__blockterms {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
 .footer__link--additional {
   font-size: 10px;
   font-weight: 400;
@@ -273,7 +287,7 @@
     display: inline-flex;
     margin-top: 100px;
     margin-right: 0;
-    width: 264px;
+    width: 300px;
     justify-content: flex-start;
   }
 
@@ -299,6 +313,7 @@
 
   @include tablet {
     // position: absolute;
+    margin-right: 0;
     text-align: right;
     right: 30px;
     bottom: 100px;
